@@ -1,0 +1,16 @@
+/*   */ package com.codedisaster.steamworks;
+/*   */ 
+/*   */ 
+/*   */ 
+/*   */ 
+/*   */ public enum SteamHTTP$API
+/*   */ {
+/* 8 */   Client,
+/* 9 */   Server;
+/*   */ }
+
+
+/* Location:              D:\Rusted Warfare\Rusted Warfare\game-lib.jar!\com\codedisaster\steamworks\SteamHTTP$API.class
+ * Java compiler version: 8 (52.0)
+ * JD-Core Version:       1.1.3
+ */
