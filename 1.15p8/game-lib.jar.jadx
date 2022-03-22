@@ -68,15 +68,17 @@
       "1.15p8"
     ],
     [
-      "librocket",
+      "game",
+      "rts",
       "corrodinggames",
       "com",
       "源代码",
       "1.15p8"
     ],
     [
-      "scripts",
-      "librocket",
+      "com.corrodinggames.rts.game.n",
+      "game",
+      "rts",
       "corrodinggames",
       "com",
       "源代码",
@@ -225,7 +227,7 @@
           "attachType": "INSN",
           "index": 12
         },
-        "comment": "时间来着"
+        "comment": "金钱"
       },
       {
         "nodeRef": {
@@ -279,13 +281,21 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "d(F)V"
+        },
+        "comment": "1.15版本中允许更高的资金上限了"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.n",
           "shortId": "d(Ljava/lang/String;)V"
         },
         "codeRef": {
           "attachType": "INSN",
           "index": 18
         },
-        "comment": "超出预期，为什么要写死10队"
+        "comment": "致修改者：注意此处"
       },
       {
         "nodeRef": {
@@ -488,6 +498,126 @@
           "declClass": "com.corrodinggames.rts.gameFramework.l"
         },
         "newName": "游戏终端"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.a",
+          "shortId": "aX:I"
+        },
+        "newName": "attackingCount"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.a",
+          "shortId": "aY:I"
+        },
+        "newName": "defendingCount"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.g",
+          "shortId": "l:F"
+        },
+        "newName": "AttackDelay"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.g",
+          "shortId": "q:Z"
+        },
+        "newName": "StagingForAttack"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.g",
+          "shortId": "u:F"
+        },
+        "newName": "StagingTimer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.i",
+          "shortId": "J:I"
+        },
+        "newName": "Builders"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.i",
+          "shortId": "g:F"
+        },
+        "newName": "requestedBuildersDelay"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.i",
+          "shortId": "k:F"
+        },
+        "newName": "abandonedTimer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.i",
+          "shortId": "l:F"
+        },
+        "newName": "claimedBaseTimer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.a.o",
+          "shortId": "Q:I"
+        },
+        "newName": "id"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.b.a",
+          "shortId": "e:F"
+        },
+        "newName": "x"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.b.a",
+          "shortId": "f:F"
+        },
+        "newName": "y"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.b.a",
+          "shortId": "k:I"
+        },
+        "newName": "tile_gid"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.b.i",
+          "shortId": "d:I"
+        },
+        "newName": "width"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.b.i",
+          "shortId": "e:I"
+        },
+        "newName": "height"
       },
       {
         "nodeRef": {
@@ -909,6 +1039,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "aU:Z"
+        },
+        "newName": "isDedicatedServer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "an:Lcom/corrodinggames/rts/gameFramework/l;"
         },
         "newName": "gameEngine"
@@ -971,6 +1109,30 @@
       },
       {
         "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.java.u",
+          "shortId": "i:Z"
+        },
+        "newName": "noDisplay"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.java.u",
+          "shortId": "j:Z"
+        },
+        "newName": "noSound"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.java.u",
+          "shortId": "k:Z"
+        },
+        "newName": "noMusic"
+      },
+      {
+        "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.game.i",
           "shortId": "q()Ljava/lang/String;"
@@ -1029,6 +1191,26 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "d(F)V"
+        },
+        "newName": "checkMoneyMaxLimit"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "d(F)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "curCredits"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.n",
           "shortId": "k(I)Lcom/corrodinggames/rts/game/n;"
         },
         "codeRef": {
@@ -1048,6 +1230,14 @@
           "index": 0
         },
         "newName": "status"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.bl",
+          "shortId": "a()J"
+        },
+        "newName": "getTookTime"
       },
       {
         "nodeRef": {
@@ -1269,6 +1459,18 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "a(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131072
+        },
+        "newName": "error_msg"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "a(Ljava/lang/String;I)V"
         },
         "newName": "alert"
@@ -1296,6 +1498,18 @@
           "shortId": "e(Ljava/lang/String;)V"
         },
         "newName": "PrintLOG"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "n(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "reportProblem"
       },
       {
         "nodeRef": {
@@ -1455,6 +1669,18 @@
       },
       {
         "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.java.Main",
+          "shortId": "h()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 13
+        },
+        "newName": "setupTookTime"
+      },
+      {
+        "nodeRef": {
           "refType": "PKG",
           "declClass": "com.corrodinggames.rts",
           "shortId": ""
@@ -1466,12 +1692,12 @@
   "openTabs": [
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.ae",
+      "tabPath": "com.corrodinggames.rts.game.m",
       "subPath": "java",
-      "caret": 113092,
+      "caret": 0,
       "view": {
         "x": 0,
-        "y": 27803
+        "y": 0
       }
     }
   ],

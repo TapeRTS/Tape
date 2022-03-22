@@ -8,7 +8,7 @@ echo 'tape.Hcat.work' > CNAME
 git init
 git add -A
 
-git commit -m 'deploy'
+git commit -m 'update'
 
 git push -f git@github.com:TapeRTS/Tape.git master:master
 
