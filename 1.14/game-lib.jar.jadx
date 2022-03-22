@@ -1,0 +1,568 @@
+{
+  "projectVersion": 1,
+  "files": [],
+  "treeExpansions": [
+    [
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "p005a.p006a.p007a",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "com.a.a.a.a",
+      "p005a.p006a.p007a",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "p012rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "p014b",
+      "p012rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "java",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "源代码",
+      "1.14"
+    ],
+    [
+      "com",
+      "源代码",
+      "1.14"
+    ],
+    [
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.14"
+    ],
+    [
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.14"
+    ],
+    [
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.14"
+    ],
+    [
+      "com.corrodinggames.rts.game.m",
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.14"
+    ]
+  ],
+  "codeData": {
+    "comments": [
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "a:I"
+        },
+        "comment": "人数上限 默认值10"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "c:I"
+        },
+        "comment": "队伍ID上限 默认100"
+      }
+    ],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.m"
+        },
+        "newName": "GameRule"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ad"
+        },
+        "newName": "Hcat_Multiplaye"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.i",
+          "shortId": "u:I"
+        },
+        "newName": "nowFPS"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.i",
+          "shortId": "w:Ljava/lang/String;"
+        },
+        "newName": "FPSText"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "a:I"
+        },
+        "newName": "PlayerNumMax"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "ab:[Lcom/corrodinggames/rts/game/m;"
+        },
+        "newName": "player_maxxx_arr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "c:I"
+        },
+        "newName": "MaxTeamIdLimit"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "d:I"
+        },
+        "newName": "PlayerMaxxxxx"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "i:I"
+        },
+        "newName": "Teamxxxx_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "j:Ljava/lang/String;"
+        },
+        "newName": "ModifyTips"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "m:I"
+        },
+        "newName": "money"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.e",
+          "shortId": "i:Lcom/corrodinggames/rts/game/m;"
+        },
+        "newName": "team_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.e",
+          "shortId": "p:Lcom/corrodinggames/rts/game/m;"
+        },
+        "newName": "player_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ad",
+          "shortId": "bf:Z"
+        },
+        "newName": "isGameStart_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.n",
+          "shortId": "a:[Ljava/lang/String;"
+        },
+        "newName": "ApiUrl"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "aA:Z"
+        },
+        "newName": "sandbox"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "aB:Z"
+        },
+        "newName": "nomods"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "as:Z"
+        },
+        "newName": "nobackground"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "aw:Z"
+        },
+        "newName": "printUnits"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "ax:Z"
+        },
+        "newName": "outputUnitImages"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "ay:Z"
+        },
+        "newName": "oldreplays"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "az:Z"
+        },
+        "newName": "steam"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.java.r",
+          "shortId": "z:Z"
+        },
+        "newName": "disabletextureread"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "a(I)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "teamId"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "b(IZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "MaxTeamId"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "d(Ljava/lang/String;)V"
+        },
+        "newName": "teamColor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "e(Ljava/lang/String;)V"
+        },
+        "newName": "teamColorName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "h(I)V"
+        },
+        "newName": "money_max"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "u()Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "player_stats_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.m",
+          "shortId": "v()Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "player_stats_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ad",
+          "shortId": "a(I)Ljava/lang/String;"
+        },
+        "newName": "read_config_fog_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ad",
+          "shortId": "b(Lcom/corrodinggames/rts/gameFramework/g/ah;)V"
+        },
+        "newName": "game_command_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ad",
+          "shortId": "c(I)Ljava/lang/String;"
+        },
+        "newName": "AI_difficulty_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ad",
+          "shortId": "e(I)I"
+        },
+        "newName": "startingCredits_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ad",
+          "shortId": "e(I)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "k(Ljava/lang/String;)Ljava/lang/Integer;"
+        },
+        "newName": "getMapFile_Hcat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.java.Main",
+          "shortId": "a([Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "force_vbos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.java.Main",
+          "shortId": "a([Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "disable_vbos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.java.Main",
+          "shortId": "a([Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 655360
+        },
+        "newName": "fullscreen"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.java.Main",
+          "shortId": "a([Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 786432
+        },
+        "newName": "nopreferipv4"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.java.Main",
+          "shortId": "a([Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 851968
+        },
+        "newName": "NoMusic"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.java.Main",
+          "shortId": "a([Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 917504
+        },
+        "newName": "nosound"
+      },
+      {
+        "nodeRef": {
+          "refType": "PKG",
+          "declClass": "com.corrodinggames.rts",
+          "shortId": ""
+        },
+        "newName": "rts"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.i",
+      "subPath": "java",
+      "caret": 40935,
+      "view": {
+        "x": 0,
+        "y": 15266
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.java.Main",
+      "subPath": "java",
+      "caret": 3197,
+      "view": {
+        "x": 0,
+        "y": 1179
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.R",
+      "subPath": "java",
+      "caret": 58,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.a",
+      "subPath": "java",
+      "caret": 62,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.m",
+      "subPath": "java",
+      "caret": 3135,
+      "view": {
+        "x": 0,
+        "y": 1059
+      }
+    }
+  ],
+  "activeTab": 4
+}
