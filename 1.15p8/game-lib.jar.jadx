@@ -68,6 +68,13 @@
       "1.15p8"
     ],
     [
+      "librocket",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
       "game",
       "rts",
       "corrodinggames",
@@ -76,8 +83,42 @@
       "1.15p8"
     ],
     [
-      "com.corrodinggames.rts.game.n",
-      "game",
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "p038h",
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "java",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "p041k",
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "p036f",
+      "gameFramework",
       "rts",
       "corrodinggames",
       "com",
@@ -488,6 +529,13 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.f"
+        },
+        "newName": "sound_C0738f"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.h.ai"
         },
         "newName": "mapType"
@@ -782,6 +830,14 @@
       {
         "nodeRef": {
           "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.ar",
+          "shortId": "b:Ljava/lang/String;"
+        },
+        "newName": "music_NowPlaying"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.gameFramework.e.f",
           "shortId": "bt:Ljava/lang/String;"
         },
@@ -942,6 +998,22 @@
       {
         "nodeRef": {
           "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.n",
+          "shortId": "b:Z"
+        },
+        "newName": "printLog"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.n",
+          "shortId": "c:[Ljava/lang/String;"
+        },
+        "newName": "ServerListApiURL"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "aA:Z"
         },
@@ -1098,6 +1170,22 @@
           "shortId": "o:J"
         },
         "newName": "startInitTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.java.n",
+          "shortId": "c:Lcom/corrodinggames/rts/java/audio/Music;"
+        },
+        "newName": "gameMusic"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.java.q",
+          "shortId": "a:Lcom/corrodinggames/rts/java/audio/Sound;"
+        },
+        "newName": "loadedSound"
       },
       {
         "nodeRef": {
@@ -1270,6 +1358,14 @@
           "shortId": "a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"
         },
         "newName": "getI18NText"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.f.a",
+          "shortId": "c()Ljava/lang/String;"
+        },
+        "newName": "getLocalLanguage"
       },
       {
         "nodeRef": {
@@ -1454,6 +1550,42 @@
           "shortId": "l()Ljava/lang/String;"
         },
         "newName": "m_readUTF"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.n",
+          "shortId": "a(Ljava/util/List;Ljava/lang/String;Z)Lcom/corrodinggames/rts/gameFramework/h/t;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131077
+        },
+        "newName": "ua"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.n",
+          "shortId": "a(Ljava/util/List;Ljava/lang/String;Z)Lcom/corrodinggames/rts/gameFramework/h/t;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262145
+        },
+        "newName": "ping"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.n",
+          "shortId": "a(Ljava/util/List;Ljava/lang/String;Z)Lcom/corrodinggames/rts/gameFramework/h/t;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393219
+        },
+        "newName": "lang"
       },
       {
         "nodeRef": {
@@ -1689,17 +1821,6 @@
       }
     ]
   },
-  "openTabs": [
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.m",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    }
-  ],
-  "activeTab": 0
+  "openTabs": [],
+  "activeTab": -1
 }
