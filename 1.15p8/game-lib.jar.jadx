@@ -61,20 +61,6 @@
       "1.15p8"
     ],
     [
-      "rts",
-      "corrodinggames",
-      "com",
-      "源代码",
-      "1.15p8"
-    ],
-    [
-      "librocket",
-      "corrodinggames",
-      "com",
-      "源代码",
-      "1.15p8"
-    ],
-    [
       "game",
       "rts",
       "corrodinggames",
@@ -83,6 +69,15 @@
       "1.15p8"
     ],
     [
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "p042l",
       "gameFramework",
       "rts",
       "corrodinggames",
@@ -100,7 +95,8 @@
       "1.15p8"
     ],
     [
-      "java",
+      "units",
+      "game",
       "rts",
       "corrodinggames",
       "com",
@@ -108,8 +104,9 @@
       "1.15p8"
     ],
     [
-      "p041k",
-      "gameFramework",
+      "custom",
+      "units",
+      "game",
       "rts",
       "corrodinggames",
       "com",
@@ -117,8 +114,8 @@
       "1.15p8"
     ],
     [
-      "p036f",
-      "gameFramework",
+      "com.corrodinggames.rts.game.n",
+      "game",
       "rts",
       "corrodinggames",
       "com",
@@ -180,7 +177,7 @@
           "declClass": "com.corrodinggames.rts.game.n",
           "shortId": "al:F"
         },
-        "comment": "1.15新增 没有引用"
+        "comment": "1.15新增"
       },
       {
         "nodeRef": {
@@ -531,7 +528,7 @@
           "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.f"
         },
-        "newName": "sound_C0738f"
+        "newName": "game_C0738f"
       },
       {
         "nodeRef": {
@@ -703,6 +700,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "R:Z"
+        },
+        "newName": "isSurvival"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.n",
           "shortId": "U:J"
         },
         "newName": "nowTime_ms"
@@ -719,6 +724,22 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "ad:[I"
+        },
+        "newName": "teamColorHexArr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "ae:[Ljava/lang/String;"
+        },
+        "newName": "teamColorNameArr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.n",
           "shortId": "ag:I"
         },
         "newName": "aiDifficulty"
@@ -730,6 +751,14 @@
           "shortId": "an:J"
         },
         "newName": "currentTimeMillis_HcatA"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "ap:[Lcom/corrodinggames/rts/game/n;"
+        },
+        "newName": "totalPlayerNumArr"
       },
       {
         "nodeRef": {
@@ -974,14 +1003,6 @@
       {
         "nodeRef": {
           "refType": "FIELD",
-          "declClass": "com.corrodinggames.rts.gameFramework.h.ap",
-          "shortId": "d:I"
-        },
-        "newName": "lastPingTimeReceived"
-      },
-      {
-        "nodeRef": {
-          "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.gameFramework.h.g",
           "shortId": "n:Ljava/lang/String;"
         },
@@ -993,7 +1014,7 @@
           "declClass": "com.corrodinggames.rts.gameFramework.h.k",
           "shortId": "c:I"
         },
-        "newName": "SteamVersion"
+        "newName": "StreamVersion"
       },
       {
         "nodeRef": {
@@ -1255,6 +1276,14 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "b(I)I"
+        },
+        "newName": "getVotedPlayerNum"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.n",
           "shortId": "b(IZ)V"
         },
         "codeRef": {
@@ -1274,6 +1303,14 @@
           "index": 327680
         },
         "newName": "MaxTeamId"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.n",
+          "shortId": "c(I)I"
+        },
+        "newName": "getVotePlayerMax"
       },
       {
         "nodeRef": {
@@ -1447,6 +1484,18 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.h.ad",
+          "shortId": "c(Lcom/corrodinggames/rts/gameFramework/h/ar;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65622
+        },
+        "newName": "Multicast"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.ad",
           "shortId": "e()Ljava/lang/String;"
         },
         "newName": "getFogText"
@@ -1493,7 +1542,7 @@
           "declClass": "com.corrodinggames.rts.gameFramework.h.k",
           "shortId": "c()I"
         },
-        "newName": "getSteamVersion"
+        "newName": "getStreamVersion"
       },
       {
         "nodeRef": {
@@ -1821,6 +1870,97 @@
       }
     ]
   },
-  "openTabs": [],
-  "activeTab": -1
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.b.d",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.s",
+      "subPath": "java",
+      "caret": 628,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.o",
+      "subPath": "java",
+      "caret": 63,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.n",
+      "subPath": "java",
+      "caret": 4639,
+      "view": {
+        "x": 0,
+        "y": 2427
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.gameFramework.h.ad",
+      "subPath": "java",
+      "caret": 14995,
+      "view": {
+        "x": 0,
+        "y": 6555
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.gameFramework.f",
+      "subPath": "java",
+      "caret": 1199,
+      "view": {
+        "x": 0,
+        "y": 562
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.units.custom.l",
+      "subPath": "java",
+      "caret": 24146,
+      "view": {
+        "x": 0,
+        "y": 11835
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.gameFramework.h.ah",
+      "subPath": "java",
+      "caret": 376,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "android.graphics.Color",
+      "subPath": "java",
+      "caret": 803,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "activeTab": 3
 }
