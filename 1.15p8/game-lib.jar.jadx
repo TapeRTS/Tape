@@ -124,6 +124,36 @@
       "com",
       "源代码",
       "1.15p8"
+    ],
+    [
+      "units",
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "p028h",
+      "units",
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "com.corrodinggames.rts.game.units.h.d",
+      "p028h",
+      "units",
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
     ]
   ],
   "codeData": {
@@ -529,6 +559,13 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.h.e"
+        },
+        "newName": "AttackSubmarine"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.f"
         },
         "newName": "sound_C0738f"
@@ -666,6 +703,14 @@
           "shortId": "e:I"
         },
         "newName": "height"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.f",
+          "shortId": "h:F"
+        },
+        "newName": "attackRange"
       },
       {
         "nodeRef": {
@@ -826,6 +871,22 @@
           "shortId": "g:I"
         },
         "newName": "incomeRate"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.units.ag",
+          "shortId": "cl:F"
+        },
+        "newName": "hp"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.units.ag",
+          "shortId": "cm:F"
+        },
+        "newName": "maxHp"
       },
       {
         "nodeRef": {
@@ -1150,6 +1211,14 @@
       {
         "nodeRef": {
           "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.w",
+          "shortId": "eh:F"
+        },
+        "newName": "height"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.java.Main",
           "shortId": "c:Ljava/lang/String;"
         },
@@ -1318,6 +1387,54 @@
           "index": 0
         },
         "newName": "status"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "A()F"
+        },
+        "newName": "getTurnSpeed"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "P()Z"
+        },
+        "newName": "isUnderwater"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "b(I)F"
+        },
+        "newName": "getShootDelay"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "m()F"
+        },
+        "newName": "getAttackRange"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "q(I)F"
+        },
+        "newName": "getDirectDamage"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "z()F"
+        },
+        "newName": "getSpeed"
       },
       {
         "nodeRef": {
