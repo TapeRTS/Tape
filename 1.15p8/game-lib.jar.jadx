@@ -155,14 +155,6 @@
       "1.15p8"
     ],
     [
-      "appFramework",
-      "rts",
-      "corrodinggames",
-      "com",
-      "源代码",
-      "1.15p8"
-    ],
-    [
       "p034e",
       "gameFramework",
       "rts",
@@ -173,6 +165,45 @@
     ],
     [
       "java",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "units",
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "p028h",
+      "units",
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "p026f",
+      "units",
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "1.15p8"
+    ],
+    [
+      "p023d",
+      "units",
+      "game",
       "rts",
       "corrodinggames",
       "com",
@@ -607,6 +638,62 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.al"
+        },
+        "newName": "UnitInfo"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.d.g"
+        },
+        "newName": "Extractor"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.h.a"
+        },
+        "newName": "BattleShip"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.h.b"
+        },
+        "newName": "BuilderShip"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.h.c"
+        },
+        "newName": "GunBoat"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.h.d"
+        },
+        "newName": "MissileShip"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.h.e"
+        },
+        "newName": "AttackSubmarine"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.game.units.h.f"
+        },
+        "newName": "SeaUnit"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.f"
         },
         "newName": "game_C0738f"
@@ -623,7 +710,7 @@
           "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.l"
         },
-        "newName": "游戏终端"
+        "newName": "GameTerminal"
       },
       {
         "nodeRef": {
@@ -952,6 +1039,22 @@
           "shortId": "g:I"
         },
         "newName": "incomeRate"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.units.ag",
+          "shortId": "cl:F"
+        },
+        "newName": "hp"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.game.units.ag",
+          "shortId": "cm:F"
+        },
+        "newName": "maxHp"
       },
       {
         "nodeRef": {
@@ -1524,6 +1627,62 @@
           "shortId": "u()Ljava/lang/String;"
         },
         "newName": "getHostStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.al$1",
+          "shortId": "c(I)I"
+        },
+        "newName": "getUpgradePrice"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.al$31",
+          "shortId": "c()I"
+        },
+        "newName": "getPrice"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "\u003cinit\u003e(Z)V"
+        },
+        "newName": "AttackSubmarine"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "P()Z"
+        },
+        "newName": "isUnderwater"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "c()Lcom/corrodinggames/rts/game/units/al;"
+        },
+        "newName": "getUnitInfo"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "m()F"
+        },
+        "newName": "getAttackRange"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.e",
+          "shortId": "q(I)F"
+        },
+        "newName": "getDamage"
       },
       {
         "nodeRef": {
@@ -2124,6 +2283,14 @@
           "shortId": ""
         },
         "newName": "rts"
+      },
+      {
+        "nodeRef": {
+          "refType": "PKG",
+          "declClass": "com.corrodinggames.rts.game.units.h",
+          "shortId": ""
+        },
+        "newName": "seaunits"
       }
     ]
   },
@@ -2132,7 +2299,7 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.game.b.a",
       "subPath": "java",
-      "caret": 1265,
+      "caret": 1273,
       "view": {
         "x": 0,
         "y": 0
@@ -2142,60 +2309,30 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.game.b.b",
       "subPath": "java",
-      "caret": 4364,
+      "caret": 4372,
       "view": {
         "x": 0,
-        "y": 8670
+        "y": 2034
       }
     },
     {
       "type": "class",
       "tabPath": "com.corrodinggames.rts.game.b.c",
       "subPath": "java",
-      "caret": 930,
+      "caret": 938,
       "view": {
         "x": 0,
         "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.j",
-      "subPath": "java",
-      "caret": 379,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.l",
-      "subPath": "java",
-      "caret": 6975,
-      "view": {
-        "x": 0,
-        "y": 1766
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.n",
-      "subPath": "java",
-      "caret": 5315,
-      "view": {
-        "x": 0,
-        "y": 1899
       }
     },
     {
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.h.ad",
       "subPath": "java",
-      "caret": 68576,
+      "caret": 69193,
       "view": {
         "x": 0,
-        "y": 29419
+        "y": 32338
       }
     },
     {
@@ -2212,27 +2349,27 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.appFramework.o",
       "subPath": "java",
-      "caret": 1601,
+      "caret": 1625,
       "view": {
         "x": 0,
-        "y": 0
+        "y": 293
       }
     },
     {
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.h.ac",
       "subPath": "java",
-      "caret": 1643,
+      "caret": 0,
       "view": {
         "x": 0,
-        "y": 182
+        "y": 2
       }
     },
     {
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.h.c",
       "subPath": "java",
-      "caret": 941,
+      "caret": 949,
       "view": {
         "x": 0,
         "y": 11
@@ -2242,17 +2379,17 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.h.am",
       "subPath": "java",
-      "caret": 8298,
+      "caret": 8354,
       "view": {
         "x": 0,
-        "y": 2788
+        "y": 3081
       }
     },
     {
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.h.d",
       "subPath": "java",
-      "caret": 2434,
+      "caret": 2486,
       "view": {
         "x": 0,
         "y": 468
@@ -2262,12 +2399,62 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.h.n",
       "subPath": "java",
-      "caret": 13429,
+      "caret": 13627,
       "view": {
         "x": 0,
-        "y": 5782
+        "y": 5714
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.units.ak",
+      "subPath": "java",
+      "caret": 1566,
+      "view": {
+        "x": 0,
+        "y": 288
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.units.h.f",
+      "subPath": "java",
+      "caret": 716,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.units.h.a",
+      "subPath": "java",
+      "caret": 1102,
+      "view": {
+        "x": 0,
+        "y": 96
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.units.b.c",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 2
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.units.h.e",
+      "subPath": "java",
+      "caret": 10484,
+      "view": {
+        "x": 0,
+        "y": 4947
       }
     }
   ],
-  "activeTab": 13
+  "activeTab": 15
 }
