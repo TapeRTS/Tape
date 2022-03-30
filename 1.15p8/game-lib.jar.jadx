@@ -3251,7 +3251,7 @@
       "caret": 1190,
       "view": {
         "x": 0,
-        "y": 409
+        "y": 269
       }
     },
     {
@@ -3261,19 +3261,19 @@
       "caret": 192,
       "view": {
         "x": 0,
-        "y": 528
+        "y": 114
       }
     },
     {
       "type": "class",
       "tabPath": "com.corrodinggames.rts.game.units.h.e",
       "subPath": "java",
-      "caret": 11223,
+      "caret": 11748,
       "view": {
         "x": 0,
         "y": 5186
       }
     }
   ],
-  "activeTab": 23
+  "activeTab": 24
 }
