@@ -1,7 +1,7 @@
 {
   "projectVersion": 1,
   "files": [
-    ""
+    "game-lib.jar"
   ],
   "treeExpansions": [
     [
@@ -4008,7 +4008,7 @@
       "caret": 27247,
       "view": {
         "x": 0,
-        "y": 12840
+        "y": 12274
       }
     },
     {
@@ -4028,7 +4028,7 @@
       "caret": 2492,
       "view": {
         "x": 0,
-        "y": 162
+        "y": 432
       }
     },
     {
@@ -4048,7 +4048,7 @@
       "caret": 43120,
       "view": {
         "x": 0,
-        "y": 21649
+        "y": 20162
       }
     },
     {
@@ -4058,7 +4058,7 @@
       "caret": 20577,
       "view": {
         "x": 0,
-        "y": 9912
+        "y": 9394
       }
     },
     {
@@ -4085,7 +4085,7 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.game.units.i",
       "subPath": "java",
-      "caret": 543,
+      "caret": 0,
       "view": {
         "x": 0,
         "y": 0
@@ -4135,7 +4135,7 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.game.units.custom.d",
       "subPath": "java",
-      "caret": 276,
+      "caret": 0,
       "view": {
         "x": 0,
         "y": 0
@@ -4228,7 +4228,7 @@
       "caret": 1172,
       "view": {
         "x": 0,
-        "y": 240
+        "y": 0
       }
     },
     {
@@ -4238,7 +4238,7 @@
       "caret": 46120,
       "view": {
         "x": 6,
-        "y": 17819
+        "y": 16978
       }
     },
     {
@@ -4248,7 +4248,7 @@
       "caret": 6696,
       "view": {
         "x": 0,
-        "y": 2834
+        "y": 2642
       }
     }
   ],
