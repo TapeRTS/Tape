@@ -15,34 +15,6 @@
       "game-lib.jar"
     ],
     [
-      "corrodinggames",
-      "com",
-      "源代码",
-      "game-lib.jar"
-    ],
-    [
-      "p012rts",
-      "corrodinggames",
-      "com",
-      "源代码",
-      "game-lib.jar"
-    ],
-    [
-      "rts",
-      "corrodinggames",
-      "com",
-      "源代码",
-      "game-lib.jar"
-    ],
-    [
-      "game",
-      "rts",
-      "corrodinggames",
-      "com",
-      "源代码",
-      "game-lib.jar"
-    ],
-    [
       "2 files"
     ],
     [
@@ -161,6 +133,93 @@
       "com",
       "源代码",
       "1.15p8"
+    ],
+    [
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "p030a",
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "com.corrodinggames.rts.gameFramework.s",
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "p007a",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "com.corrodinggames.rts.gameFramework.l",
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "utility",
+      "gameFramework",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "librocket",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "源代码",
+      "classes.dex"
+    ],
+    [
+      "com.corrodinggames.rts",
+      "源代码",
+      "classes.dex"
+    ],
+    [
+      "game",
+      "com.corrodinggames.rts",
+      "源代码",
+      "classes.dex"
     ]
   ],
   "codeData": {
@@ -828,9 +887,128 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ac"
+        },
+        "newName": "HotkeyBinding"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ad"
+        },
+        "newName": "KeyBindB"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ae"
+        },
+        "newName": "KeyBindC"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ag"
+        },
+        "newName": "KeyBindD"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.am"
         },
         "newName": "GameMusic"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.an"
+        },
+        "newName": "AndroidMusicFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ao"
+        },
+        "newName": "AndroidMusicFactoryB"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ap"
+        },
+        "newName": "GameMusicFileStream"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ar"
+        },
+        "newName": "Abstract_isMusicPlaying"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.as"
+        },
+        "newName": "Abstract_Music"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.at"
+        },
+        "newName": "Enum_Music"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.au"
+        },
+        "newName": "GameMusicThread"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.av"
+        },
+        "newName": "musicFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.aw"
+        },
+        "newName": "musicFactoryB"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ax"
+        },
+        "newName": "musicFactoryC"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.ba"
+        },
+        "newName": "Replay"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.bb"
+        },
+        "newName": "ReplayFrame"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.bm"
+        },
+        "newName": "Enum_draw"
       },
       {
         "nodeRef": {
@@ -842,9 +1020,23 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.h"
+        },
+        "newName": "Enum_System"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.h.ai"
         },
         "newName": "mapType"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.ap"
+        },
+        "newName": "DataStream_Hcat"
       },
       {
         "nodeRef": {
@@ -866,6 +1058,27 @@
           "declClass": "com.corrodinggames.rts.gameFramework.utility.ab"
         },
         "newName": "UnitConfig"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.d"
+        },
+        "newName": "ANRWatchDogThread"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.y"
+        },
+        "newName": "GameSave"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.z"
+        },
+        "newName": "AndroidGameThread"
       },
       {
         "nodeRef": {
@@ -1557,6 +1770,22 @@
       {
         "nodeRef": {
           "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.am",
+          "shortId": "q:F"
+        },
+        "newName": "timer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.am",
+          "shortId": "t:Ljava/lang/String;"
+        },
+        "newName": "musicFilePath"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.gameFramework.ar",
           "shortId": "b:Ljava/lang/String;"
         },
@@ -1577,6 +1806,86 @@
           "shortId": "ek:I"
         },
         "newName": "objectHeight"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.ba",
+          "shortId": "a:Ljava/lang/String;"
+        },
+        "newName": "replaysFolder"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.ba",
+          "shortId": "s:Z"
+        },
+        "newName": "replayPlaying"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.bb",
+          "shortId": "b:I"
+        },
+        "newName": "stoppedFrame"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.bb",
+          "shortId": "c:I"
+        },
+        "newName": "time"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.bb",
+          "shortId": "d:I"
+        },
+        "newName": "commandCount"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.bb",
+          "shortId": "e:I"
+        },
+        "newName": "resyncCount"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.bb",
+          "shortId": "f:I"
+        },
+        "newName": "lastCommandFrame"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.bb",
+          "shortId": "h:Z"
+        },
+        "newName": "recStoped"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.bb",
+          "shortId": "j:J"
+        },
+        "newName": "curTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.be",
+          "shortId": "b:Ljava/lang/String;"
+        },
+        "newName": "fileName"
       },
       {
         "nodeRef": {
@@ -1633,6 +1942,14 @@
           "shortId": "bl:Z"
         },
         "newName": "gameHasStarted"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.ad",
+          "shortId": "e:I"
+        },
+        "newName": "serverVersionInt"
       },
       {
         "nodeRef": {
@@ -1902,6 +2219,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "aW:Z"
+        },
+        "newName": "isPC_Device"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "aY:Z"
         },
         "newName": "isLibGDX"
@@ -1912,7 +2237,7 @@
           "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "aZ:Z"
         },
-        "newName": "isIOS"
+        "newName": "isIOS_Device"
       },
       {
         "nodeRef": {
@@ -1945,6 +2270,14 @@
           "shortId": "ay:Z"
         },
         "newName": "Replay_Debug"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "bJ:I"
+        },
+        "newName": "globalSeed"
       },
       {
         "nodeRef": {
@@ -1990,9 +2323,33 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "dT:Z"
+        },
+        "newName": "isANRDogOK"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "dk:Lcom/corrodinggames/rts/gameFramework/z;"
+        },
+        "newName": "gameThread"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "dz:Ljava/lang/String;"
         },
         "newName": "BuildVersionRELEASE"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.m",
+          "shortId": "b:Landroid/graphics/Paint;"
+        },
+        "newName": "paint"
       },
       {
         "nodeRef": {
@@ -2009,6 +2366,14 @@
           "shortId": "c:Ljava/util/LinkedHashSet;"
         },
         "newName": "trackSet"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.w",
+          "shortId": "dY:J"
+        },
+        "newName": "GameObjectID"
       },
       {
         "nodeRef": {
@@ -2033,6 +2398,14 @@
           "shortId": "eh:F"
         },
         "newName": "height"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.z",
+          "shortId": "c:J"
+        },
+        "newName": "Time"
       },
       {
         "nodeRef": {
@@ -2204,11 +2577,31 @@
           "declClass": "com.corrodinggames.rts.game.i",
           "shortId": "n()Ljava/lang/String;"
         },
+        "newName": "getVersionNZ"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.i",
+          "shortId": "n()Ljava/lang/String;"
+        },
         "codeRef": {
           "attachType": "VAR",
           "index": 0
         },
         "newName": "ver"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.i",
+          "shortId": "n()Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "version"
       },
       {
         "nodeRef": {
@@ -2478,18 +2871,6 @@
         },
         "codeRef": {
           "attachType": "VAR",
-          "index": 13
-        },
-        "newName": "unitConfig"
-      },
-      {
-        "nodeRef": {
-          "refType": "METHOD",
-          "declClass": "com.corrodinggames.rts.game.units.custom.ae",
-          "shortId": "a(Ljava/lang/String;Ljava/io/InputStream;JLcom/corrodinggames/rts/gameFramework/g/b;Lcom/corrodinggames/rts/gameFramework/utility/j;Ljava/lang/String;Ljava/lang/String;)Lcom/corrodinggames/rts/game/units/custom/l;"
-        },
-        "codeRef": {
-          "attachType": "VAR",
           "index": 983040
         },
         "newName": "modRoot"
@@ -2501,6 +2882,18 @@
           "shortId": "a(Ljava/lang/String;Ljava/io/InputStream;JLcom/corrodinggames/rts/gameFramework/g/b;Lcom/corrodinggames/rts/gameFramework/utility/j;Ljava/lang/String;Ljava/lang/String;)Lcom/corrodinggames/rts/game/units/custom/l;"
         },
         "newName": "readUnitConfig"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ae",
+          "shortId": "a(Ljava/lang/String;Ljava/io/InputStream;JLcom/corrodinggames/rts/gameFramework/g/b;Lcom/corrodinggames/rts/gameFramework/utility/j;Ljava/lang/String;Ljava/lang/String;)Lcom/corrodinggames/rts/game/units/custom/l;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 13
+        },
+        "newName": "unitConfig"
       },
       {
         "nodeRef": {
@@ -2592,6 +2985,14 @@
           "declClass": "com.corrodinggames.rts.game.units.h.c",
           "shortId": "a(Lcom/corrodinggames/rts/game/units/ag;I)V"
         },
+        "newName": "fireProjectile"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.h.c",
+          "shortId": "a(Lcom/corrodinggames/rts/game/units/ag;I)V"
+        },
         "codeRef": {
           "attachType": "VAR",
           "index": 1
@@ -2609,14 +3010,6 @@
           "index": 3
         },
         "newName": "createProjectile"
-      },
-      {
-        "nodeRef": {
-          "refType": "METHOD",
-          "declClass": "com.corrodinggames.rts.game.units.h.c",
-          "shortId": "a(Lcom/corrodinggames/rts/game/units/ag;I)V"
-        },
-        "newName": "fireProjectile"
       },
       {
         "nodeRef": {
@@ -2949,6 +3342,70 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.b.a",
+          "shortId": "a(ILjava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "port"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.b.a",
+          "shortId": "a(ILjava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "password"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.ba",
+          "shortId": "a(Ljava/lang/String;Z)Ljava/io/File;"
+        },
+        "newName": "saveReplays"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.ba",
+          "shortId": "d(Ljava/lang/String;)V"
+        },
+        "newName": "saveGameReplay"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.ba",
+          "shortId": "d(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "savePath"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.ba",
+          "shortId": "e(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "path"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.bl",
           "shortId": "a()J"
         },
@@ -2977,6 +3434,66 @@
           "shortId": "b(FFF)Lcom/corrodinggames/rts/gameFramework/c/e;"
         },
         "newName": "emitSmalExplosion"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.f",
+          "shortId": "a(III)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 18
+        },
+        "newName": "range"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.f",
+          "shortId": "a(III)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "min"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.f",
+          "shortId": "a(III)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "max"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.f",
+          "shortId": "a(Lcom/corrodinggames/rts/gameFramework/w;III)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "min"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.f",
+          "shortId": "a(Lcom/corrodinggames/rts/gameFramework/w;III)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "max"
       },
       {
         "nodeRef": {
@@ -3162,6 +3679,18 @@
         },
         "codeRef": {
           "attachType": "VAR",
+          "index": 327
+        },
+        "newName": "clientVersionInt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.ad",
+          "shortId": "c(Lcom/corrodinggames/rts/gameFramework/h/ar;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
           "index": 65622
         },
         "newName": "Multicast"
@@ -3250,9 +3779,33 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.h.ap",
+          "shortId": "a(I)V"
+        },
+        "newName": "writeInt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.ap",
           "shortId": "a(Ljava/lang/Integer;)V"
         },
         "newName": "m_WriteInt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.ap",
+          "shortId": "a(Z)V"
+        },
+        "newName": "writeBoolean"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.ap",
+          "shortId": "c(Ljava/lang/String;)V"
+        },
+        "newName": "writeUTF"
       },
       {
         "nodeRef": {
@@ -3269,6 +3822,26 @@
           "shortId": "f()Ljava/lang/String;"
         },
         "newName": "getPlayerIp"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.k",
+          "shortId": "b(I)V"
+        },
+        "newName": "setStreamVersion"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.k",
+          "shortId": "b(I)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "ver"
       },
       {
         "nodeRef": {
@@ -3333,6 +3906,14 @@
           "shortId": "l()Ljava/lang/String;"
         },
         "newName": "m_readUTF"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.h.n",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        "newName": "startErrorReport"
       },
       {
         "nodeRef": {
@@ -3450,6 +4031,18 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "a(Ljava/lang/String;I)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "text"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "a(Ljava/lang/String;Ljava/lang/Throwable;)V"
         },
         "newName": "LogThrowable"
@@ -3466,9 +4059,41 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "al()V"
+        },
+        "newName": "setupANRWatchDog"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "ap()Z"
+        },
+        "newName": "isNonDedicatedServer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "aq()Z"
+        },
+        "newName": "isIOS"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "ar()Z"
         },
         "newName": "isPC"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "as()Z"
+        },
+        "newName": "isPC_"
       },
       {
         "nodeRef": {
@@ -3510,9 +4135,25 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "c(Z)I"
+        },
+        "newName": "gameVersionInternal"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "e(Ljava/lang/String;)V"
         },
         "newName": "PrintLOG"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "g(Ljava/lang/String;)V"
+        },
+        "newName": "LogTrace"
       },
       {
         "nodeRef": {
@@ -3549,6 +4190,14 @@
           "shortId": "x()Lcom/corrodinggames/rts/gameFramework/l;"
         },
         "newName": "getInstance"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "newName": "getStaticBooleanValue"
       },
       {
         "nodeRef": {
@@ -3597,14 +4246,6 @@
           "index": 524288
         },
         "newName": "default"
-      },
-      {
-        "nodeRef": {
-          "refType": "METHOD",
-          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
-          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
-        },
-        "newName": "getStaticBooleanValue"
       },
       {
         "nodeRef": {
@@ -3901,6 +4542,18 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.w",
+          "shortId": "a(JLjava/lang/Class;Z)Lcom/corrodinggames/rts/gameFramework/w;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "ObjectId"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.java.Main",
           "shortId": "a(Ljava/lang/String;)V"
         },
@@ -4125,13 +4778,21 @@
           "shortId": ""
         },
         "newName": "water"
+      },
+      {
+        "nodeRef": {
+          "refType": "PKG",
+          "declClass": "com.corrodinggames.rts.gameFramework.a",
+          "shortId": ""
+        },
+        "newName": "GameAudio"
       }
     ]
   },
   "openTabs": [
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.m",
+      "tabPath": "com.corrodinggames.rts.gameFramework.l",
       "subPath": "java",
       "caret": 0,
       "view": {
@@ -4141,99 +4802,59 @@
     },
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.i",
+      "tabPath": "com.corrodinggames.rts.gameFramework.utility.d",
       "subPath": "java",
-      "caret": 4470,
+      "caret": 0,
       "view": {
         "x": 0,
-        "y": 1426
+        "y": 0
       }
     },
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.f",
+      "tabPath": "com.corrodinggames.rts.gameFramework.utility.c",
       "subPath": "java",
-      "caret": 2513,
+      "caret": 63,
       "view": {
         "x": 0,
-        "y": 754
+        "y": 0
       }
     },
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.h.c",
+      "tabPath": "com.corrodinggames.rts.gameFramework.i.o",
       "subPath": "java",
-      "caret": 969,
+      "caret": 0,
       "view": {
         "x": 0,
-        "y": 370
+        "y": 0
       }
     },
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.ag",
+      "tabPath": "com.corrodinggames.rts.gameFramework.c.c",
       "subPath": "java",
-      "caret": 27247,
+      "caret": 0,
       "view": {
         "x": 0,
-        "y": 12274
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.h.d",
-      "subPath": "java",
-      "caret": 2294,
-      "view": {
-        "x": 0,
-        "y": 672
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.h.f",
-      "subPath": "java",
-      "caret": 2492,
-      "view": {
-        "x": 0,
-        "y": 432
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.gameFramework.f",
-      "subPath": "java",
-      "caret": 1334,
-      "view": {
-        "x": 0,
-        "y": 306
+        "y": 0
       }
     },
     {
       "type": "class",
       "tabPath": "com.corrodinggames.rts.game.n",
       "subPath": "java",
-      "caret": 43120,
+      "caret": 0,
       "view": {
         "x": 0,
-        "y": 20162
+        "y": 2
       }
     },
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.s",
+      "tabPath": "com.corrodinggames.rts.R",
       "subPath": "java",
-      "caret": 20577,
-      "view": {
-        "x": 0,
-        "y": 9394
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.ai",
-      "subPath": "java",
-      "caret": 321,
+      "caret": 84,
       "view": {
         "x": 0,
         "y": 0
@@ -4241,7 +4862,7 @@
     },
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.aa",
+      "tabPath": "com.corrodinggames.rts.gameFramework.ar",
       "subPath": "java",
       "caret": 0,
       "view": {
@@ -4251,174 +4872,14 @@
     },
     {
       "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.i",
+      "tabPath": "com.corrodinggames.rts.game.a",
       "subPath": "java",
-      "caret": 0,
+      "caret": 62,
       "view": {
         "x": 0,
         "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.ab",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.ad",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.af",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.aw",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.d",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.n",
-      "subPath": "java",
-      "caret": 276,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.s",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.y",
-      "subPath": "java",
-      "caret": 9465,
-      "view": {
-        "x": 0,
-        "y": 3552
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.gameFramework.utility.m",
-      "subPath": "java",
-      "caret": 467,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.f.a",
-      "subPath": "java",
-      "caret": 1044,
-      "view": {
-        "x": 0,
-        "y": 466
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.ae",
-      "subPath": "java",
-      "caret": 48786,
-      "view": {
-        "x": 0,
-        "y": 18408
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.g",
-      "subPath": "java",
-      "caret": 741,
-      "view": {
-        "x": 0,
-        "y": 336
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.h",
-      "subPath": "java",
-      "caret": 361,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.b.i",
-      "subPath": "java",
-      "caret": 1172,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.game.units.custom.ae",
-      "subPath": "java",
-      "caret": 46120,
-      "view": {
-        "x": 6,
-        "y": 16978
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.corrodinggames.rts.gameFramework.utility.ab",
-      "subPath": "java",
-      "caret": 6696,
-      "view": {
-        "x": 0,
-        "y": 2642
       }
     }
   ],
-  "activeTab": 4
+  "activeTab": 0
 }
