@@ -9,3 +9,9 @@ Tape是一组开放的、不受阻碍的 Rusted Warfare混淆映射，每个人�
 ## 贡献
 
 请在提交映射之前查看[命名约定](CONVENTIONS.md)
+
+## 鸣谢
+
+- [JADX](https://github.com/skylot/jadx)
+- [Recaf](https://github.com/Col-E/Recaf)
+- [Bytecode Viewer](https://github.com/Konloch/bytecode-viewer)
