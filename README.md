@@ -1,5 +1,5 @@
 # Tape
-
+ [![HitCount](https://hits.dwyl.com/TapeRTS/Tape.svg?style=flat-square)](http://hits.dwyl.com/TapeRTS/Tape)
 Tape是一组开放的、不受阻碍的 Rusted Warfare混淆映射，每个人都可以在知识共享零许可下免费使用。其目的是让每个人都可以自由、公开地修改  Rusted Warfare，同时还能够按照他们认为合适的方式创新和处理映射。
 
 ## 用法
