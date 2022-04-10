@@ -141,9 +141,122 @@
           "shortId": "c:I"
         },
         "comment": "队伍ID上限 默认100"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.h",
+          "shortId": "a(III)V"
+        },
+        "comment": "RUDP Header\n    \n    0 1 2 3 4 5 6 7 8            15\n    +-+-+-+-+-+-+-+-+---------------+\n    |S|A|E|R|N|C| | |    Header     |\n    |Y|C|A|S|U|H|0|0|    Length     |\n    |N|K|K|T|L|K| | |               |\n    +-+-+-+-+-+-+-+-+---------------+\n    |  Sequence #   +   Ack Number  |\n    +---------------+---------------+\n    |            Checksum           |\n    +---------------+---------------+"
       }
     ],
     "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.a"
+        },
+        "newName": "ACKSegment"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.b"
+        },
+        "newName": "DATSegment"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.c"
+        },
+        "newName": "EAKSegment"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.d"
+        },
+        "newName": "FINSegment"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.e"
+        },
+        "newName": "NULSegment"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.f"
+        },
+        "newName": "RSTSegment"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.g"
+        },
+        "newName": "SYNSegment"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.h"
+        },
+        "newName": "Segment"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.a.i"
+        },
+        "newName": "Timer"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.b"
+        },
+        "newName": "ReliableServerSocket"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.h"
+        },
+        "newName": "ReliableSocket"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.o"
+        },
+        "newName": "ReliableSocketInputStream"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.q"
+        },
+        "newName": "ReliableSocketOutputStream"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.r"
+        },
+        "newName": "ReliableSocketProfile"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a.a.s"
+        },
+        "newName": "ReliableSocketStateListener"
+      },
       {
         "nodeRef": {
           "refType": "CLASS",
@@ -157,6 +270,54 @@
           "declClass": "com.corrodinggames.rts.gameFramework.g.ad"
         },
         "newName": "Hcat_Multiplaye"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a.a.a.b",
+          "shortId": "a:[B"
+        },
+        "newName": "data"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a.a.a.c",
+          "shortId": "a:[I"
+        },
+        "newName": "data"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a.a.a.h",
+          "shortId": "a:I"
+        },
+        "newName": "flags"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a.a.a.h",
+          "shortId": "b:I"
+        },
+        "newName": "hlen"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a.a.a.h",
+          "shortId": "c:I"
+        },
+        "newName": "seqn"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a.a.a.h",
+          "shortId": "e:I"
+        },
+        "newName": "nretx"
       },
       {
         "nodeRef": {
@@ -325,6 +486,70 @@
           "shortId": "z:Z"
         },
         "newName": "disabletextureread"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.d",
+          "shortId": "a()Ljava/lang/String;"
+        },
+        "newName": "type"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.h",
+          "shortId": "a(I)V"
+        },
+        "newName": "setAck"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.h",
+          "shortId": "a(III)V"
+        },
+        "newName": "init"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.h",
+          "shortId": "a([BII)V"
+        },
+        "newName": "parseBytes"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.h",
+          "shortId": "b([BII)La/a/a/h;"
+        },
+        "newName": "parse"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.h",
+          "shortId": "d()[B"
+        },
+        "newName": "getBytes"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.h",
+          "shortId": "n()I"
+        },
+        "newName": "getAck"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a.a.a.h",
+          "shortId": "o()I"
+        },
+        "newName": "getRetxCounter"
       },
       {
         "nodeRef": {
@@ -521,6 +746,30 @@
           "index": 917504
         },
         "newName": "nosound"
+      },
+      {
+        "nodeRef": {
+          "refType": "PKG",
+          "declClass": "a",
+          "shortId": ""
+        },
+        "newName": "net"
+      },
+      {
+        "nodeRef": {
+          "refType": "PKG",
+          "declClass": "a.a",
+          "shortId": ""
+        },
+        "newName": "udp"
+      },
+      {
+        "nodeRef": {
+          "refType": "PKG",
+          "declClass": "a.a.a",
+          "shortId": ""
+        },
+        "newName": "impl"
       },
       {
         "nodeRef": {
