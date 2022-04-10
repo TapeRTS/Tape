@@ -308,9 +308,44 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.aa"
+        },
+        "newName": "GameListUpdateData_Dr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ab"
+        },
+        "newName": "GameListGetRoomData_Dr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.g.ad"
         },
-        "newName": "Hcat_Multiplaye"
+        "newName": "NetworkEngine"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ae"
+        },
+        "newName": "Packet_QuestionResponce_Dr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.af"
+        },
+        "newName": "ServerSocketStart_Dr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ah"
+        },
+        "newName": "ServerData_Dr"
       },
       {
         "nodeRef": {
@@ -336,6 +371,34 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.aq"
+        },
+        "newName": "GzipGameOutputStream"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ar"
+        },
+        "newName": "Packet_Data"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.as"
+        },
+        "newName": "Pacaker_HeartBeat_Dr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.d"
+        },
+        "newName": "PlayerSocketConnect"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "com.corrodinggames.rts.gameFramework.g.k"
         },
         "newName": "GameInputStream"
@@ -346,6 +409,34 @@
           "declClass": "com.corrodinggames.rts.gameFramework.g.l"
         },
         "newName": "GzipGameInputStream"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.q"
+        },
+        "newName": "GameListGetData_Dr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.v"
+        },
+        "newName": "GameListSendErrorData_Dr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.y"
+        },
+        "newName": "GameListAddRoom_Dr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.z"
+        },
+        "newName": "GameListRemoveRoom_Dr"
       },
       {
         "nodeRef": {
@@ -568,6 +659,22 @@
           "shortId": "a:Ljava/lang/String;"
         },
         "newName": "name"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ar",
+          "shortId": "b:I"
+        },
+        "newName": "type"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ar",
+          "shortId": "c:[B"
+        },
+        "newName": "bytes"
       },
       {
         "nodeRef": {
@@ -1076,6 +1183,62 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.aq",
+          "shortId": "\u003cinit\u003e(Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "isGzip"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.ar",
+          "shortId": "\u003cinit\u003e(I)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "type"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.d",
+          "shortId": "a()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 16
+        },
+        "newName": "dataLength"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.d",
+          "shortId": "a()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 18
+        },
+        "newName": "packetType"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.g.d",
+          "shortId": "a()V"
+        },
+        "newName": "readSocketData"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.g.k",
           "shortId": "a(Lcom/corrodinggames/rts/gameFramework/utility/m;Ljava/lang/Class;)V"
         },
@@ -1316,6 +1479,14 @@
           "shortId": ""
         },
         "newName": "rts"
+      },
+      {
+        "nodeRef": {
+          "refType": "PKG",
+          "declClass": "com.corrodinggames.rts.gameFramework.g",
+          "shortId": ""
+        },
+        "newName": "network"
       }
     ]
   },
