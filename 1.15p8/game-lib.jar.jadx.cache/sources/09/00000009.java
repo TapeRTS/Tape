@@ -102,9 +102,9 @@ public class C0842h extends BitmapOrTexture {
             if (z) {
             }
             m1004C();
-            if (this.f5702C == HueColor.f1355b) {
+            if (this.f5702C == HueColor.hueAdd) {
                 mo954a(f5697w);
-            } else if (this.f5702C == HueColor.f1357d) {
+            } else if (this.f5702C == HueColor.hueShift) {
                 mo954a(f5698x);
             } else {
                 mo954a(f5696v);
@@ -119,7 +119,7 @@ public class C0842h extends BitmapOrTexture {
                     GameEngine.PrintLOG("Loading in lazy loaded bitmap:" + this.sourceBitmap.mo64a() + " team:" + this.f5701B);
                 } catch (OutOfMemoryError e) {
                     GameEngine.PrintLOG("Colouring failed with OOM");
-                    GameEngine.m890a(EnumC0903u.gameImageColor, e);
+                    GameEngine.m890a(EnumC0903u.f6158c, e);
                     this.coloredBitmap = GameEngine.getInstance().graphics.mo128q();
                     return;
                 }
@@ -132,9 +132,9 @@ public class C0842h extends BitmapOrTexture {
             int[] iArr = {this.f5700A};
             int[] iArr2 = {this.f5701B};
             long tookTime2 = C0651bl.getTookTime();
-            if (this.f5702C == HueColor.f1355b) {
+            if (this.f5702C == HueColor.hueAdd) {
                 Team.m3932b(this.sourceBitmap, bitmapOrTextureArr, iArr);
-            } else if (this.f5702C == HueColor.f1357d) {
+            } else if (this.f5702C == HueColor.hueShift) {
                 Team.m3949a(this.sourceBitmap, bitmapOrTextureArr, iArr, iArr2);
             } else {
                 Team.m3950a(this.sourceBitmap, bitmapOrTextureArr, iArr);
@@ -146,7 +146,7 @@ public class C0842h extends BitmapOrTexture {
             this.sourceBitmap = null;
             double m2277a2 = C0651bl.m2277a(tookTime);
             if (m2277a2 > 1.0d) {
-                GameEngine.PrintLOG((this.f5702C == HueColor.f1354a ? "Standard " : "Hue ") + "Colouring took:" + C0651bl.m2278a(m2277a2) + " (" + C0651bl.m2278a(m2277a) + ")");
+                GameEngine.PrintLOG((this.f5702C == HueColor.pureGreen ? "Standard " : "Hue ") + "Colouring took:" + C0651bl.m2278a(m2277a2) + " (" + C0651bl.m2278a(m2277a) + ")");
             }
             f5695D = (float) (f5695D + m2277a2);
         }

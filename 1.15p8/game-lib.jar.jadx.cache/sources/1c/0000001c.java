@@ -1258,14 +1258,14 @@ public class CustomUnitMetadataFactory {
                 if (customUnitMetadata.graphics_total_frames < 1) {
                     throw new C0395bl("TOTAL_FRAMES cannot be: " + customUnitMetadata.graphics_total_frames + " (must be 1 or more)");
                 }
-                customUnitMetadata.f3032T = unitConfig.getStaticIntegerValue("graphics", "frame_width", (Integer) (-1)).intValue();
-                customUnitMetadata.f3033U = unitConfig.getStaticIntegerValue("graphics", "frame_height", (Integer) (-1)).intValue();
-                customUnitMetadata.f2746V = unitConfig.getStaticIntegerValue("graphics", "default_frame", (Integer) 0).intValue();
-                customUnitMetadata.f2775ad = unitConfig.getStaticIntegerValue("graphics", "image_offsetX", (Integer) 0).intValue();
-                customUnitMetadata.f2776ae = unitConfig.getStaticIntegerValue("graphics", "image_offsetY", (Integer) 0).intValue();
-                customUnitMetadata.f2750Z = HueColor.f1354a;
+                customUnitMetadata.graphics_frame_width = unitConfig.getStaticIntegerValue("graphics", "frame_width", (Integer) (-1)).intValue();
+                customUnitMetadata.graphics_frame_height = unitConfig.getStaticIntegerValue("graphics", "frame_height", (Integer) (-1)).intValue();
+                customUnitMetadata.graphics_default_frame = unitConfig.getStaticIntegerValue("graphics", "default_frame", (Integer) 0).intValue();
+                customUnitMetadata.graphics_image_offsetX = unitConfig.getStaticIntegerValue("graphics", "image_offsetX", (Integer) 0).intValue();
+                customUnitMetadata.graphics_image_offsetY = unitConfig.getStaticIntegerValue("graphics", "image_offsetY", (Integer) 0).intValue();
+                customUnitMetadata.hueColor = HueColor.PureGreen;
                 if (unitConfig.getStaticBooleanValue("graphics", "teamColorsUseHue", (Boolean) false).booleanValue()) {
-                    customUnitMetadata.f2750Z = HueColor.f1355b;
+                    customUnitMetadata.hueColor = HueColor.HueAdd;
                 }
                 String staticStringValue4 = unitConfig.getStaticStringValue("graphics", "teamColoringMode", (String) null);
                 if (staticStringValue4 != null) {
@@ -1273,87 +1273,87 @@ public class CustomUnitMetadataFactory {
                         throw new C0395bl("Cannot use teamColoringMode and teamColorsUseHue at the same time");
                     }
                     if (staticStringValue4.equalsIgnoreCase("pureGreen")) {
-                        customUnitMetadata.f2750Z = HueColor.f1354a;
+                        customUnitMetadata.hueColor = HueColor.PureGreen;
                     } else if (staticStringValue4.equalsIgnoreCase("hueAdd")) {
-                        customUnitMetadata.f2750Z = HueColor.f1355b;
+                        customUnitMetadata.hueColor = HueColor.HueAdd;
                     } else if (staticStringValue4.equalsIgnoreCase("hueShift")) {
-                        customUnitMetadata.f2750Z = HueColor.f1357d;
+                        customUnitMetadata.hueColor = HueColor.HueShift;
                     } else if (staticStringValue4.equalsIgnoreCase("disabled")) {
-                        customUnitMetadata.f2750Z = HueColor.f1358e;
+                        customUnitMetadata.hueColor = HueColor.Disabled;
                     } else {
                         throw new C0395bl("Unknown teamColoringMode:" + staticStringValue4);
                     }
                 }
-                customUnitMetadata.f2749Y = unitConfig.getStaticBooleanValue("graphics", "imageSmoothing", (Boolean) false).booleanValue();
-                customUnitMetadata.f2748X = unitConfig.getStaticBooleanValue("graphics", "imageSmoothingWhenZoomedIn", (Boolean) false).booleanValue();
-                customUnitMetadata.f2747W = unitConfig.m665a(customUnitMetadata, "graphics", "isVisible", (LogicBoolean) null);
-                if (customUnitMetadata.f2747W == LogicBoolean.trueBoolean) {
-                    customUnitMetadata.f2747W = null;
+                customUnitMetadata.graphics_imageSmoothing = unitConfig.getStaticBooleanValue("graphics", "imageSmoothing", (Boolean) false).booleanValue();
+                customUnitMetadata.graphics_imageSmoothingWhenZoomedIn = unitConfig.getStaticBooleanValue("graphics", "imageSmoothingWhenZoomedIn", (Boolean) false).booleanValue();
+                customUnitMetadata.graphics_isVisible = unitConfig.getLogicBooleanValue(customUnitMetadata, "graphics", "isVisible", (LogicBoolean) null);
+                if (customUnitMetadata.graphics_isVisible == LogicBoolean.trueBoolean) {
+                    customUnitMetadata.graphics_isVisible = null;
                 }
-                customUnitMetadata.f3064cA.f2180m = unitConfig.getStaticBooleanValue("graphics", "isVisibleToEnemies", (Boolean) true).booleanValue();
-                customUnitMetadata.f3034aa = customUnitMetadata.m3112a(filename, unitConfig.getStaticStringValueNoNull("graphics", "image"), customUnitMetadata.f2749Y, "graphics", "image");
-                if (customUnitMetadata.f3034aa == null) {
+                customUnitMetadata.f3064cA.graphics_isVisibleToEnemies = unitConfig.getStaticBooleanValue("graphics", "isVisibleToEnemies", (Boolean) true).booleanValue();
+                customUnitMetadata.graphics_image = customUnitMetadata.m3112a(filename, unitConfig.getStaticStringValueNoNull("graphics", "image"), customUnitMetadata.graphics_imageSmoothing, "graphics", "image");
+                if (customUnitMetadata.graphics_image == null) {
                     throw new C0395bl("Main unit image must be set on custom unit");
                 }
-                customUnitMetadata.f2773ab = customUnitMetadata.f3034aa.getWidth() / customUnitMetadata.graphics_total_frames;
-                customUnitMetadata.f2774ac = customUnitMetadata.f3034aa.getHeight();
-                if (customUnitMetadata.f3032T > 0) {
-                    customUnitMetadata.f2773ab = customUnitMetadata.f3032T;
+                customUnitMetadata.imageWidth = customUnitMetadata.graphics_image.getWidth() / customUnitMetadata.graphics_total_frames;
+                customUnitMetadata.imageHeight = customUnitMetadata.graphics_image.getHeight();
+                if (customUnitMetadata.graphics_frame_width > 0) {
+                    customUnitMetadata.imageWidth = customUnitMetadata.graphics_frame_width;
                 }
-                if (customUnitMetadata.f3033U > 0) {
-                    customUnitMetadata.f2774ac = customUnitMetadata.f3033U;
-                    if (customUnitMetadata.f2774ac < customUnitMetadata.f3034aa.getHeight()) {
-                        customUnitMetadata.f3031S = customUnitMetadata.f3034aa.getWidth() / customUnitMetadata.f2773ab;
+                if (customUnitMetadata.graphics_frame_height > 0) {
+                    customUnitMetadata.imageHeight = customUnitMetadata.graphics_frame_height;
+                    if (customUnitMetadata.imageHeight < customUnitMetadata.graphics_image.getHeight()) {
+                        customUnitMetadata.f3031S = customUnitMetadata.graphics_image.getWidth() / customUnitMetadata.imageWidth;
                         if (customUnitMetadata.f3031S < 1) {
                             customUnitMetadata.f3031S = 1;
                         }
                     }
                 }
-                customUnitMetadata.f3035af = customUnitMetadata.m3118a(unitConfig, "graphics", "image_back");
-                customUnitMetadata.f2777ag = unitConfig.getStaticBooleanValue("graphics", "image_back_always_use_full_image", (Boolean) false).booleanValue();
-                customUnitMetadata.f3036ah = customUnitMetadata.m3118a(unitConfig, "graphics", "image_wreak");
-                customUnitMetadata.f3037ai = customUnitMetadata.m3118a(unitConfig, "graphics", "image_turret");
+                customUnitMetadata.graphics_image_back = customUnitMetadata.getImage(unitConfig, "graphics", "image_back");
+                customUnitMetadata.graphics_image_back_always_use_full_image = unitConfig.getStaticBooleanValue("graphics", "image_back_always_use_full_image", (Boolean) false).booleanValue();
+                customUnitMetadata.graphics_image_wreak = customUnitMetadata.getImage(unitConfig, "graphics", "image_wreak");
+                customUnitMetadata.graphics_image_turret = customUnitMetadata.getImage(unitConfig, "graphics", "image_turret");
                 customUnitMetadata.f2779am = AbstractC0511j.f3465dE;
                 String staticStringValue5 = unitConfig.getStaticStringValue("graphics", "image_shadow", "NONE");
                 if (staticStringValue5.equalsIgnoreCase("AUTO")) {
-                    String str6 = "[autoShadow:" + customUnitMetadata.f2773ab + "," + customUnitMetadata.f2774ac + "]" + customUnitMetadata.f3034aa.f5658d + "-" + customUnitMetadata.f3034aa.f5675e;
+                    String str6 = "[autoShadow:" + customUnitMetadata.imageWidth + "," + customUnitMetadata.imageHeight + "]" + customUnitMetadata.graphics_image.f5658d + "-" + customUnitMetadata.graphics_image.f5675e;
                     BitmapOrTexture m3542c = m3542c(str6);
                     if (m3542c != null) {
                         customUnitMetadata.f3038aj = m3542c;
                     } else {
-                        customUnitMetadata.f3038aj = Unit.m3772a(customUnitMetadata.f3034aa, customUnitMetadata.f2773ab, customUnitMetadata.f2774ac);
+                        customUnitMetadata.f3038aj = Unit.m3772a(customUnitMetadata.graphics_image, customUnitMetadata.imageWidth, customUnitMetadata.imageHeight);
                         m3570a(customUnitMetadata.f3038aj);
                         if (customUnitMetadata.f3038aj != null) {
                             m3564a(str6, customUnitMetadata.f3038aj);
                         }
                     }
                 } else if (staticStringValue5.equalsIgnoreCase("AUTO_ANIMATED")) {
-                    String str7 = "[autoShadowAnimated:" + customUnitMetadata.f2773ab + "," + customUnitMetadata.f2774ac + "]" + customUnitMetadata.f3034aa.f5658d + "-" + customUnitMetadata.f3034aa.f5675e;
+                    String str7 = "[autoShadowAnimated:" + customUnitMetadata.imageWidth + "," + customUnitMetadata.imageHeight + "]" + customUnitMetadata.graphics_image.f5658d + "-" + customUnitMetadata.graphics_image.f5675e;
                     BitmapOrTexture m3542c2 = m3542c(str7);
                     if (m3542c2 != null) {
                         customUnitMetadata.f3038aj = m3542c2;
                     } else {
-                        customUnitMetadata.f3038aj = Unit.m3772a(customUnitMetadata.f3034aa, customUnitMetadata.f3034aa.getWidth(), customUnitMetadata.f3034aa.getHeight());
+                        customUnitMetadata.f3038aj = Unit.m3772a(customUnitMetadata.graphics_image, customUnitMetadata.graphics_image.getWidth(), customUnitMetadata.graphics_image.getHeight());
                         m3570a(customUnitMetadata.f3038aj);
                         if (customUnitMetadata.f3038aj != null) {
                             m3564a(str7, customUnitMetadata.f3038aj);
                         }
                     }
-                    customUnitMetadata.f2778ak = true;
+                    customUnitMetadata.graphics_image_shadow_frames = true;
                 } else {
-                    customUnitMetadata.f3038aj = customUnitMetadata.m3112a(filename, staticStringValue5, customUnitMetadata.f2749Y, "graphics", "image_shadow");
+                    customUnitMetadata.f3038aj = customUnitMetadata.m3112a(filename, staticStringValue5, customUnitMetadata.graphics_imageSmoothing, "graphics", "image_shadow");
                 }
                 if (unitConfig.getStaticBooleanValue("graphics", "image_shadow_frames", (Boolean) false).booleanValue()) {
-                    customUnitMetadata.f2778ak = true;
+                    customUnitMetadata.graphics_image_shadow_frames = true;
                 }
-                customUnitMetadata.f3039al = customUnitMetadata.m3119a(customUnitMetadata.f3034aa, customUnitMetadata.f2750Z);
+                customUnitMetadata.f3039al = customUnitMetadata.m3119a(customUnitMetadata.graphics_image, customUnitMetadata.hueColor);
                 customUnitMetadata.f2999r = unitConfig.getStaticBooleanValue("graphics", "teamColorsOnTurret", (Boolean) false).booleanValue();
-                if (customUnitMetadata.f2999r && customUnitMetadata.f3037ai != null) {
-                    customUnitMetadata.f3040an = customUnitMetadata.m3119a(customUnitMetadata.f3037ai, customUnitMetadata.f2750Z);
+                if (customUnitMetadata.f2999r && customUnitMetadata.graphics_image_turret != null) {
+                    customUnitMetadata.f3040an = customUnitMetadata.m3119a(customUnitMetadata.graphics_image_turret, customUnitMetadata.hueColor);
                 }
                 float floatValue = unitConfig.getStaticFloatValue("graphics", "scaleImagesTo", Float.valueOf(-1.0f)).floatValue();
                 if (floatValue > 0.0f) {
-                    customUnitMetadata.f3053bC = (floatValue * customUnitMetadata.core_globalScale) / customUnitMetadata.f2773ab;
+                    customUnitMetadata.f3053bC = (floatValue * customUnitMetadata.core_globalScale) / customUnitMetadata.imageWidth;
                 }
                 float floatValue2 = unitConfig.getStaticFloatValue("graphics", "imageScale", Float.valueOf(1.0f)).floatValue();
                 if (floatValue2 != 1.0f) {
@@ -1362,24 +1362,24 @@ public class CustomUnitMetadataFactory {
                 float floatValue3 = unitConfig.getStaticFloatValue("graphics", "scaleTurretImagesTo", Float.valueOf(-1.0f)).floatValue();
                 if (floatValue3 > 0.0f) {
                     float f = floatValue3 * customUnitMetadata.core_globalScale;
-                    if (customUnitMetadata.f3037ai == null) {
+                    if (customUnitMetadata.graphics_image_turret == null) {
                         throw new RuntimeException("scaleTurretImagesTo needs image_turret set");
                     }
-                    customUnitMetadata.f3054bD = f / customUnitMetadata.f3037ai.width;
+                    customUnitMetadata.f3054bD = f / customUnitMetadata.graphics_image_turret.width;
                 }
                 float floatValue4 = unitConfig.getStaticFloatValue("graphics", "turretImageScale", Float.valueOf(1.0f)).floatValue();
                 if (floatValue4 != 1.0f) {
                     customUnitMetadata.f3054bD *= floatValue4;
                 }
                 customUnitMetadata.f3041ao = ExperimentalHovertank.f3415e;
-                BitmapOrTexture m3118a = customUnitMetadata.m3118a(unitConfig, "graphics", "image_shield");
-                if (m3118a != null) {
-                    customUnitMetadata.f3041ao = m3118a;
+                BitmapOrTexture image = customUnitMetadata.getImage(unitConfig, "graphics", "image_shield");
+                if (image != null) {
+                    customUnitMetadata.f3041ao = image;
                     customUnitMetadata.f3042ap = true;
                 }
                 customUnitMetadata.f2780aq = customUnitMetadata.m3117a(unitConfig, "graphics", "icon_build", false);
-                float width = customUnitMetadata.f3034aa.getWidth() * customUnitMetadata.f3053bC;
-                float height = customUnitMetadata.f3034aa.getHeight() * customUnitMetadata.f3053bC;
+                float width = customUnitMetadata.graphics_image.getWidth() * customUnitMetadata.f3053bC;
+                float height = customUnitMetadata.graphics_image.getHeight() * customUnitMetadata.f3053bC;
                 if (width / 2.0f > 90.0f || height / 2.0f > 90.0f) {
                     customUnitMetadata.f2731A = new Rect();
                     customUnitMetadata.f2731A.left = (int) ((-width) / 2.0f);
@@ -1488,7 +1488,7 @@ public class CustomUnitMetadataFactory {
                         }
                     }
                 }
-                customUnitMetadata.f2861cn = unitConfig.m665a(customUnitMetadata, "core", "generation_active", LogicBoolean.trueBoolean);
+                customUnitMetadata.f2861cn = unitConfig.getLogicBooleanValue(customUnitMetadata, "core", "generation_active", LogicBoolean.trueBoolean);
                 customUnitMetadata.m3127a(customUnitMetadata.f3058cg);
                 customUnitMetadata.f2868cu = unitConfig.getStaticFloatValue("core", "resourceRate", Float.valueOf(0.0f)).floatValue();
                 if (booleanValue && customUnitMetadata.f2868cu != 0.0f) {
@@ -1684,7 +1684,7 @@ public class CustomUnitMetadataFactory {
                 customUnitMetadata.f2758aI = unitConfig.getStaticBooleanValue("core", "canNotBeDirectlyAttacked", (Boolean) false).booleanValue();
                 customUnitMetadata.f2759aJ = unitConfig.getStaticBooleanValue("core", "canNotBeDamaged", Boolean.valueOf(customUnitMetadata.f2758aI)).booleanValue();
                 customUnitMetadata.f2760aK = unitConfig.getStaticBooleanValue("core", "showOnMinimap", (Boolean) true).booleanValue();
-                customUnitMetadata.f2761aL = unitConfig.getStaticBooleanValue("core", "showOnMinimapToEnemies", Boolean.valueOf(customUnitMetadata.f3064cA.f2180m)).booleanValue();
+                customUnitMetadata.f2761aL = unitConfig.getStaticBooleanValue("core", "showOnMinimapToEnemies", Boolean.valueOf(customUnitMetadata.f3064cA.graphics_isVisibleToEnemies)).booleanValue();
                 customUnitMetadata.f2762aM = unitConfig.m666a(customUnitMetadata, "core", "canOnlyBeAttackedByUnitsWithTags", (ValueList) null);
                 if (customUnitMetadata.f2758aI && customUnitMetadata.f2762aM != null) {
                     throw new RuntimeException("canNotBeDirectlyAttacked and canOnlyBeAttackedByUnitsWithTags cannot be used at the same time");
@@ -1777,11 +1777,11 @@ public class CustomUnitMetadataFactory {
                 customUnitMetadata.f2918eD = unitConfig.getStaticBooleanValue("core", "transportUnitsEachUnitAlwaysUsesSingleSlot", (Boolean) false).booleanValue();
                 customUnitMetadata.f2920eG = unitConfig.getStaticBooleanValue("core", "transportUnitsBlockAirAndWaterUnits", Boolean.valueOf(customUnitMetadata.f3082eF.size() == 0)).booleanValue();
                 customUnitMetadata.f2921eH = unitConfig.getStaticBooleanValue("core", "transportUnitsBlockOtherTransports", (Boolean) true).booleanValue();
-                customUnitMetadata.f2923eJ = unitConfig.m665a(customUnitMetadata, "core", "transportUnitsKeepBuiltUnits", LogicBoolean.falseBoolean);
-                customUnitMetadata.f2924eK = unitConfig.m665a(customUnitMetadata, "core", "transportUnitsKillOnDeath", LogicBoolean.trueBoolean);
-                customUnitMetadata.f2925eL = unitConfig.m665a(customUnitMetadata, "core", "transportUnitsKeepWaypoints", LogicBoolean.falseBoolean);
+                customUnitMetadata.f2923eJ = unitConfig.getLogicBooleanValue(customUnitMetadata, "core", "transportUnitsKeepBuiltUnits", LogicBoolean.falseBoolean);
+                customUnitMetadata.f2924eK = unitConfig.getLogicBooleanValue(customUnitMetadata, "core", "transportUnitsKillOnDeath", LogicBoolean.trueBoolean);
+                customUnitMetadata.f2925eL = unitConfig.getLogicBooleanValue(customUnitMetadata, "core", "transportUnitsKeepWaypoints", LogicBoolean.falseBoolean);
                 customUnitMetadata.f2927eN = unitConfig.getStaticFloatValue("core", "transportUnitsHealBy", Float.valueOf(0.0f)).floatValue();
-                customUnitMetadata.f2928eR = unitConfig.m665a(customUnitMetadata, "core", "transportUnitsCanUnloadUnits", (LogicBoolean) null);
+                customUnitMetadata.f2928eR = unitConfig.getLogicBooleanValue(customUnitMetadata, "core", "transportUnitsCanUnloadUnits", (LogicBoolean) null);
                 if (customUnitMetadata.f2928eR != null) {
                     customUnitMetadata.f2929eS = customUnitMetadata.f2928eR;
                 } else {
@@ -1807,7 +1807,7 @@ public class CustomUnitMetadataFactory {
                                 c0440p.f3147b = unitConfig.getStaticFloatValue("core", str12 + "pos", Float.valueOf(999.0f)).floatValue();
                                 c0440p.f3148c = unitConfig.getStaticBooleanValue("core", str12 + "forceNano", (Boolean) false).booleanValue();
                                 c0440p.f3149d = "[core]" + str13;
-                                c0440p.f3151f = unitConfig.m665a(customUnitMetadata, "core", str12 + "isLocked", (LogicBoolean) null);
+                                c0440p.f3151f = unitConfig.getLogicBooleanValue(customUnitMetadata, "core", str12 + "isLocked", (LogicBoolean) null);
                                 c0440p.f3152g = getTextWrapper(unitConfig, "core", str12 + "isLockedMessage", (String) null);
                                 if (c0440p.f3151f == LogicBoolean.falseBoolean) {
                                     c0440p.f3151f = null;
@@ -1889,7 +1889,7 @@ public class CustomUnitMetadataFactory {
                 }
                 BitmapOrTexture m3117a = customUnitMetadata.m3117a(unitConfig, "graphics", "icon_zoomed_out", false);
                 if (m3117a != null) {
-                    customUnitMetadata.f2779am = customUnitMetadata.m3119a(m3117a, customUnitMetadata.f2750Z);
+                    customUnitMetadata.f2779am = customUnitMetadata.m3119a(m3117a, customUnitMetadata.hueColor);
                 }
                 if (unitConfig.getStaticBooleanValue("graphics", "icon_zoomed_out_neverShow", (Boolean) false).booleanValue()) {
                     customUnitMetadata.f2779am = null;
@@ -2245,11 +2245,11 @@ public class CustomUnitMetadataFactory {
                     customUnitMetadata.f2940eg = unitConfig.m668a(customUnitMetadata, "attack", "canAttackLandUnits");
                     customUnitMetadata.f2941eh = unitConfig.m668a(customUnitMetadata, "attack", "canAttackUnderwaterUnits");
                 } else {
-                    customUnitMetadata.f2939ef = unitConfig.m665a(customUnitMetadata, "attack", "canAttackFlyingUnits", LogicBoolean.falseBoolean);
-                    customUnitMetadata.f2940eg = unitConfig.m665a(customUnitMetadata, "attack", "canAttackLandUnits", LogicBoolean.falseBoolean);
-                    customUnitMetadata.f2941eh = unitConfig.m665a(customUnitMetadata, "attack", "canAttackUnderwaterUnits", LogicBoolean.falseBoolean);
+                    customUnitMetadata.f2939ef = unitConfig.getLogicBooleanValue(customUnitMetadata, "attack", "canAttackFlyingUnits", LogicBoolean.falseBoolean);
+                    customUnitMetadata.f2940eg = unitConfig.getLogicBooleanValue(customUnitMetadata, "attack", "canAttackLandUnits", LogicBoolean.falseBoolean);
+                    customUnitMetadata.f2941eh = unitConfig.getLogicBooleanValue(customUnitMetadata, "attack", "canAttackUnderwaterUnits", LogicBoolean.falseBoolean);
                 }
-                customUnitMetadata.f2942ei = unitConfig.m665a(customUnitMetadata, "attack", "canAttackNotTouchingWaterUnits", (LogicBoolean) null);
+                customUnitMetadata.f2942ei = unitConfig.getLogicBooleanValue(customUnitMetadata, "attack", "canAttackNotTouchingWaterUnits", (LogicBoolean) null);
                 if (LogicBoolean.isStaticTrue(customUnitMetadata.f2942ei)) {
                     customUnitMetadata.f2942ei = null;
                 }
@@ -2339,7 +2339,7 @@ public class CustomUnitMetadataFactory {
                     if (customUnitMetadata.f2931eV == MovementType.f1646d) {
                         customUnitMetadata.f3063cx = 5;
                     } else if (customUnitMetadata.mo3085j()) {
-                        if (customUnitMetadata.f3035af != null) {
+                        if (customUnitMetadata.graphics_image_back != null) {
                             customUnitMetadata.f3063cx = 3;
                         } else {
                             customUnitMetadata.f3063cx = 2;
@@ -2528,19 +2528,19 @@ public class CustomUnitMetadataFactory {
             c0327d.f2007aE = unitConfig.getStaticBooleanValue(str, str2 + "forceNano", (Boolean) false).booleanValue();
             c0327d.f2008aF = unitConfig.getStaticStringValue(str, str2 + "type", (String) null);
             c0327d.f2047p = C0407b.m3396a(customUnitMetadata, unitConfig, str, str2 + "price", (C0407b) null);
-            c0327d.f2034az = unitConfig.m665a(customUnitMetadata, str, str2 + "isGuiBlinking", (LogicBoolean) null);
-            c0327d.f2051t = unitConfig.m665a(customUnitMetadata, str, str2 + "isVisible", (LogicBoolean) null);
-            c0327d.f2054w = unitConfig.m665a(customUnitMetadata, str, str2 + "isLocked", (LogicBoolean) null);
+            c0327d.f2034az = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isGuiBlinking", (LogicBoolean) null);
+            c0327d.f2051t = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isVisible", (LogicBoolean) null);
+            c0327d.f2054w = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isLocked", (LogicBoolean) null);
             c0327d.f2055x = m3575a(customUnitMetadata, unitConfig, str, str2 + "isLockedMessage", (String) null);
             if (c0327d.f2054w == LogicBoolean.falseBoolean) {
                 c0327d.f2054w = null;
             }
-            c0327d.f2056y = unitConfig.m665a(customUnitMetadata, str, str2 + "isLockedAlt", (LogicBoolean) null);
+            c0327d.f2056y = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isLockedAlt", (LogicBoolean) null);
             c0327d.f2057z = m3575a(customUnitMetadata, unitConfig, str, str2 + "isLockedAltMessage", (String) null);
             if (c0327d.f2056y == LogicBoolean.falseBoolean) {
                 c0327d.f2056y = null;
             }
-            c0327d.f1987A = unitConfig.m665a(customUnitMetadata, str, str2 + "isLockedAlt2", (LogicBoolean) null);
+            c0327d.f1987A = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isLockedAlt2", (LogicBoolean) null);
             c0327d.f1988B = m3575a(customUnitMetadata, unitConfig, str, str2 + "isLockedAlt2Message", (String) null);
             if (c0327d.f1987A == LogicBoolean.falseBoolean) {
                 c0327d.f1987A = null;
@@ -2568,7 +2568,7 @@ public class CustomUnitMetadataFactory {
         C0407b m3395a2 = C0407b.m3395a(customUnitMetadata, unitConfig, str, str2 + "addResourcesScaledByAIHandicaps", true);
         customUnitMetadata.m3127a(m3395a2);
         String staticStringValue3 = unitConfig.getStaticStringValue(str, str2 + "fireTurretXAtGround", (String) null);
-        LogicBoolean m665a = unitConfig.m665a(customUnitMetadata, str, str2 + "alsoTriggerOrQueueActionConditional", (LogicBoolean) null);
+        LogicBoolean logicBooleanValue = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "alsoTriggerOrQueueActionConditional", (LogicBoolean) null);
         String staticStringValue4 = unitConfig.getStaticStringValue(str, str2 + "alsoTriggerAction", (String) null);
         String staticStringValue5 = unitConfig.getStaticStringValue(str, str2 + "alsoQueueAction", (String) null);
         String staticStringValue6 = unitConfig.getStaticStringValue(str, str2 + "spawnEffects", (String) null);
@@ -2590,7 +2590,7 @@ public class CustomUnitMetadataFactory {
         C0315f.m3637a(customUnitMetadata, unitConfig, str, str2, c0327d, str3, z);
         C0319j.m3633a(customUnitMetadata, unitConfig, str, str2, c0327d, str3, z);
         C0318i.m3634a(customUnitMetadata, unitConfig, str, str2, c0327d, str3, z);
-        LogicBoolean m665a2 = unitConfig.m665a(customUnitMetadata, str, str2 + "resetCustomTimer", (LogicBoolean) null);
+        LogicBoolean logicBooleanValue2 = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "resetCustomTimer", (LogicBoolean) null);
         boolean z3 = false;
         if (z) {
             z3 = true;
@@ -2651,9 +2651,9 @@ public class CustomUnitMetadataFactory {
             } else {
                 c0327d.f2058i = EnumC0220u.f1449c;
             }
-            c0327d.f2049r = unitConfig.m665a(customUnitMetadata, str, str2 + "requireConditional", (LogicBoolean) null);
-            c0327d.f2050s = unitConfig.m665a(customUnitMetadata, str, str2 + "isActive", (LogicBoolean) null);
-            c0327d.f2051t = unitConfig.m665a(customUnitMetadata, str, str2 + "isVisible", (LogicBoolean) null);
+            c0327d.f2049r = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "requireConditional", (LogicBoolean) null);
+            c0327d.f2050s = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isActive", (LogicBoolean) null);
+            c0327d.f2051t = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isVisible", (LogicBoolean) null);
             c0327d.f2053v = unitConfig.getStaticBooleanValue(str, str2 + "isAlsoViewableByEnemies", (Boolean) false).booleanValue();
             c0327d.f2052u = unitConfig.getStaticBooleanValue(str, str2 + "isAlsoViewableByAllies", Boolean.valueOf(c0327d.f2053v)).booleanValue();
             if (z2) {
@@ -2662,17 +2662,17 @@ public class CustomUnitMetadataFactory {
                 }
                 c0327d.f2051t = LogicBoolean.falseBoolean;
             }
-            c0327d.f2054w = unitConfig.m665a(customUnitMetadata, str, str2 + "isLocked", (LogicBoolean) null);
+            c0327d.f2054w = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isLocked", (LogicBoolean) null);
             c0327d.f2055x = m3575a(customUnitMetadata, unitConfig, str, str2 + "isLockedMessage", (String) null);
             if (c0327d.f2054w == LogicBoolean.falseBoolean) {
                 c0327d.f2054w = null;
             }
-            c0327d.f2056y = unitConfig.m665a(customUnitMetadata, str, str2 + "isLockedAlt", (LogicBoolean) null);
+            c0327d.f2056y = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isLockedAlt", (LogicBoolean) null);
             c0327d.f2057z = m3575a(customUnitMetadata, unitConfig, str, str2 + "isLockedAltMessage", (String) null);
             if (c0327d.f2056y == LogicBoolean.falseBoolean) {
                 c0327d.f2056y = null;
             }
-            c0327d.f1987A = unitConfig.m665a(customUnitMetadata, str, str2 + "isLockedAlt2", (LogicBoolean) null);
+            c0327d.f1987A = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isLockedAlt2", (LogicBoolean) null);
             c0327d.f1988B = m3575a(customUnitMetadata, unitConfig, str, str2 + "isLockedAlt2Message", (String) null);
             if (c0327d.f1987A == LogicBoolean.falseBoolean) {
                 c0327d.f1987A = null;
@@ -2684,7 +2684,7 @@ public class CustomUnitMetadataFactory {
             if (c0327d.f1989C != null) {
                 customUnitMetadata.f2994fy = true;
             }
-            c0327d.f1990D = unitConfig.m665a(customUnitMetadata, str, str2 + "ai_isDisabled", LogicBoolean.falseBoolean);
+            c0327d.f1990D = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "ai_isDisabled", LogicBoolean.falseBoolean);
             c0327d.f2072aH = (EnumC0328e) unitConfig.getEnumValue(str, str2 + "aiUse", c0327d.f2072aH, EnumC0328e.class);
             c0327d.f1993G = customUnitMetadata.m3113a(unitConfig.getStaticStringValue(str, str2 + "guiBuildUnit", (String) null), str2 + "guiBuildUnit", str);
             if (c0327d.f1993G != null) {
@@ -2694,13 +2694,13 @@ public class CustomUnitMetadataFactory {
                 }
             }
             c0327d.f1992F = customUnitMetadata.m3113a(unitConfig.getStaticStringValue(str, str2 + "ai_considerSameAsBuilding", (String) null), str2 + "ai_considerSameAsBuilding", str);
-            c0327d.f2034az = unitConfig.m665a(customUnitMetadata, str, str2 + "isGuiBlinking", (LogicBoolean) null);
-            c0327d.f2027as = m3555a(customUnitMetadata.f2732B, unitConfig.getStaticStringValue(str, str2 + "iconImage", "NONE"), customUnitMetadata.f2749Y, customUnitMetadata, str, str2 + "iconImage");
-            c0327d.f2030av = unitConfig.m665a(customUnitMetadata, str, str2 + "iconExtraIsVisible", (LogicBoolean) null);
+            c0327d.f2034az = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isGuiBlinking", (LogicBoolean) null);
+            c0327d.f2027as = m3555a(customUnitMetadata.f2732B, unitConfig.getStaticStringValue(str, str2 + "iconImage", "NONE"), customUnitMetadata.graphics_imageSmoothing, customUnitMetadata, str, str2 + "iconImage");
+            c0327d.f2030av = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "iconExtraIsVisible", (LogicBoolean) null);
             if (c0327d.f2030av == LogicBoolean.trueBoolean) {
                 c0327d.f2030av = null;
             }
-            c0327d.f2028at = customUnitMetadata.m3118a(unitConfig, str, str2 + "iconExtraImage");
+            c0327d.f2028at = customUnitMetadata.getImage(unitConfig, str, str2 + "iconExtraImage");
             c0327d.f2029au = unitConfig.m642a(str, str2 + "iconExtraColor", Integer.valueOf(Color.argb(100, 255, 255, 255))).intValue();
             c0327d.f2031aw = UnitReference.parseUnitTypeOrReferenceFromConf(customUnitMetadata, unitConfig, str, str2 + "unitShownInUI", null);
             if (c0327d.f2031aw != null && c0327d.f2027as != null) {
@@ -2802,7 +2802,7 @@ public class CustomUnitMetadataFactory {
                 }
                 z4 = true;
             }
-            c0327d.f2018aj = m665a;
+            c0327d.f2018aj = logicBooleanValue;
             if (staticStringValue4 != null && !"NONE".equalsIgnoreCase(staticStringValue4)) {
                 c0327d.f2019ak = customUnitMetadata.m3099c(staticStringValue4, "alsoTriggerAction", str);
                 z4 = true;
@@ -2835,8 +2835,8 @@ public class CustomUnitMetadataFactory {
                 c0327d.f2026ar = C0392bi.m3439a(customUnitMetadata, staticStringValue11);
                 z4 = true;
             }
-            if (m665a2 != null) {
-                c0327d.f2004aB = m665a2;
+            if (logicBooleanValue2 != null) {
+                c0327d.f2004aB = logicBooleanValue2;
                 z4 = true;
             }
             if (c0327d.f2069Z.size() > 0) {
@@ -2875,14 +2875,14 @@ public class CustomUnitMetadataFactory {
                     throw new C0395bl("[" + str + "]" + str2 + "autoTriggerOnEvent: " + e.getMessage(), e);
                 }
             }
-            LogicBoolean m665a3 = unitConfig.m665a(customUnitMetadata, str, str2 + "autoTrigger", (LogicBoolean) null);
+            LogicBoolean logicBooleanValue3 = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "autoTrigger", (LogicBoolean) null);
             String staticStringValue16 = unitConfig.getStaticStringValue(str, str2 + "autoTrigger", (String) null);
             EnumC0443s enumC0443s = (EnumC0443s) unitConfig.getEnumValue(str, str2 + "autoTriggerCheckRate", customUnitMetadata.f3056bW, EnumC0443s.class);
             c0327d.f2045m = z4;
             if (z4 || c0327d.f2051t != null) {
-                if (m665a3 != null && z4) {
+                if (logicBooleanValue3 != null && z4) {
                     C0442r c0442r = new C0442r();
-                    c0442r.f3153a = m665a3;
+                    c0442r.f3153a = logicBooleanValue3;
                     c0442r.f3154b = staticStringValue16;
                     c0442r.f3155c = enumC0443s;
                     c0442r.f3156d = new C0330g(c0327d, customUnitMetadata.m3113a(c0327d.f2042j, "[" + str + "]" + str2, str));

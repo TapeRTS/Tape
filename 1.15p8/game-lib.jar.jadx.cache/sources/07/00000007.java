@@ -82,13 +82,13 @@ public class BitmapOrTexture {
 
     /* renamed from: a */
     public BitmapOrTexture[] m1018a(HueColor hueColor) {
-        if (hueColor == HueColor.f1354a) {
+        if (hueColor == HueColor.pureGreen) {
             return this.f5655a;
         }
-        if (hueColor == HueColor.f1355b) {
+        if (hueColor == HueColor.hueAdd) {
             return this.f5656b;
         }
-        if (hueColor == HueColor.f1357d) {
+        if (hueColor == HueColor.hueShift) {
             return this.f5657c;
         }
         GameEngine.log("getTeamImageCache coloringMode:" + hueColor);
@@ -97,11 +97,11 @@ public class BitmapOrTexture {
 
     /* renamed from: a */
     public void m1017a(HueColor hueColor, BitmapOrTexture[] bitmapOrTextureArr) {
-        if (hueColor == HueColor.f1354a) {
+        if (hueColor == HueColor.pureGreen) {
             this.f5655a = bitmapOrTextureArr;
-        } else if (hueColor == HueColor.f1355b) {
+        } else if (hueColor == HueColor.hueAdd) {
             this.f5656b = bitmapOrTextureArr;
-        } else if (hueColor == HueColor.f1357d) {
+        } else if (hueColor == HueColor.hueShift) {
             this.f5657c = bitmapOrTextureArr;
         } else {
             GameEngine.log("setTeamImageCache coloringMode:" + hueColor);

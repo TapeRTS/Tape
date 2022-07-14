@@ -1373,7 +1373,7 @@ public abstract class Team extends SyncedObject implements Comparable {
 
     /* renamed from: a */
     public static BitmapOrTexture[] createBitmapForTeam(BitmapOrTexture bitmap) {
-        return m3951a(bitmap, HueColor.f1354a, false);
+        return m3951a(bitmap, HueColor.pureGreen, false);
     }
 
     /* renamed from: a */
@@ -1387,7 +1387,7 @@ public abstract class Team extends SyncedObject implements Comparable {
     /* renamed from: a */
     public static BitmapOrTexture[] m3952a(BitmapOrTexture bitmapOrTexture, HueColor hueColor) {
         BitmapOrTexture[] bitmapOrTextureArr = new BitmapOrTexture[10]; // Modifier: Note!
-        if ((GameEngine.isDedicatedServer && !GameEngine.isPC_Device) || hueColor == HueColor.f1358e) {
+        if ((GameEngine.isDedicatedServer && !GameEngine.isPC_Device) || hueColor == HueColor.disabled) {
             for (int i = 0; i < bitmapOrTextureArr.length; i++) {
                 bitmapOrTextureArr[i] = bitmapOrTexture;
             }
@@ -1416,7 +1416,7 @@ public abstract class Team extends SyncedObject implements Comparable {
     /* renamed from: b */
     public static BitmapOrTexture[] m3933b(BitmapOrTexture bitmapOrTexture, HueColor hueColor) {
         BitmapOrTexture[] bitmapOrTextureArr = new BitmapOrTexture[10];
-        if ((GameEngine.isDedicatedServer && !GameEngine.isPC_Device) || hueColor == HueColor.f1358e || bitmapOrTexture.mo370z()) {
+        if ((GameEngine.isDedicatedServer && !GameEngine.isPC_Device) || hueColor == HueColor.disabled || bitmapOrTexture.mo370z()) {
             for (int i = 0; i < bitmapOrTextureArr.length; i++) {
                 bitmapOrTextureArr[i] = bitmapOrTexture;
             }
@@ -1442,9 +1442,9 @@ public abstract class Team extends SyncedObject implements Comparable {
             }
         }
         bitmapOrTexture.mo52i();
-        if (hueColor == HueColor.f1355b) {
+        if (hueColor == HueColor.hueAdd) {
             m3932b(bitmapOrTexture, bitmapOrTextureArr, iArr);
-        } else if (hueColor == HueColor.f1357d) {
+        } else if (hueColor == HueColor.hueShift) {
             m3949a(bitmapOrTexture, bitmapOrTextureArr, iArr, iArr2);
         } else {
             m3950a(bitmapOrTexture, bitmapOrTextureArr, iArr);
