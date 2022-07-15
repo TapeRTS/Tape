@@ -41,11 +41,11 @@ public class GunShip extends AbstractC0297b {
 
     /* renamed from: b */
     public UnitType getUnitType() {
-        return UnitType.f1717n;
+        return UnitType.gunShip;
     }
 
     /* renamed from: c */
-    public static void m3649c() {
+    public static void load() {
         GameEngine gameEngine = GameEngine.getInstance();
         f1821b = gameEngine.graphics.loadImage(R.drawable.gunship);
         f1822c = gameEngine.graphics.loadImage(R.drawable.gunship_shadow);

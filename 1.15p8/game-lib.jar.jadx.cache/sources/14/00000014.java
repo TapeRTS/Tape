@@ -149,12 +149,12 @@ public class LandingCraft extends AbstractC0507h implements AbstractC0230ae {
     }
 
     /* renamed from: b */
-    public UnitType mo1775r() {
-        return UnitType.f1722s;
+    public UnitType getUnitType() {
+        return UnitType.hovercraft;
     }
 
     /* renamed from: c */
-    public static void m2825c() {
+    public static void load() {
         GameEngine game = GameEngine.getInstance();
         IMAGE = game.graphics.loadImage(R.drawable.hovercraft);
         f3454c = game.graphics.loadImage(R.drawable.hovercraft_shadow);

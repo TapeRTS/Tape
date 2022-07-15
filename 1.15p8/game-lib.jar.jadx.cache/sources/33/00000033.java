@@ -226,11 +226,11 @@ public final class LangLocale {
     }
 
     /* renamed from: a */
-    public static final String m1608a(String str, String str2, Object... objArr) {
+    public static final String getI18NTextOrDefault(String i18nTextId, String defaul, Object... objArr) {
         try {
-            return getI18NText(str, objArr);
+            return getI18NText(i18nTextId, objArr);
         } catch (MissingResourceException e) {
-            return str2;
+            return defaul;
         }
     }
 
@@ -244,7 +244,7 @@ public final class LangLocale {
     }
 
     /* renamed from: b */
-    public static final String m1603b(String str) {
+    public static final String getMapI18NName(String str) {
         if (str == null) {
             return null;
         }
@@ -285,12 +285,12 @@ public final class LangLocale {
                 return str;
             }
             String group = matcher.group(1);
-            String m1608a = m1608a(group, null, new Object[0]);
-            if (m1608a == null) {
+            String i18NTextOrDefault = getI18NTextOrDefault(group, null, new Object[0]);
+            if (i18NTextOrDefault == null) {
                 GameEngine.PrintLOG("convertInlineBlocks: No key:" + group);
-                m1608a = "[No key: " + group + "]";
+                i18NTextOrDefault = "[No key: " + group + "]";
             }
-            matcher.appendReplacement(stringBuffer, m1608a);
+            matcher.appendReplacement(stringBuffer, i18NTextOrDefault);
         }
         matcher.appendTail(stringBuffer);
         return stringBuffer.toString();

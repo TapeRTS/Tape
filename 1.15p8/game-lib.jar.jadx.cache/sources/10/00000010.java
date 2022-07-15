@@ -165,11 +165,11 @@ public class DropShip extends AbstractC0297b implements AbstractC0230ae {
 
     /* renamed from: b */
     public UnitType mo1775r() {
-        return UnitType.f1729z;
+        return UnitType.dropship;
     }
 
     /* renamed from: c */
-    public static void m3653c() {
+    public static void load() {
         GameEngine gameEngine = GameEngine.getInstance();
         f1809b = gameEngine.graphics.loadImage(R.drawable.dropship);
         f1810c = gameEngine.graphics.loadImage(R.drawable.dropship_shadow);

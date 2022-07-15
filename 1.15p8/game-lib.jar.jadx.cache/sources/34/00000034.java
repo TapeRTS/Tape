@@ -906,10 +906,10 @@ public final class CustomUnitMetadata implements UnitType {
     public static LogicBoolean f3015eQ = LogicBoolean.create(null, "if not self.isOverLiquid()");
 
     /* renamed from: fS */
-    static final C0369av[] f3016fS = new C0369av[0];
+    static final Effect[] f3016fS = new Effect[0];
 
     /* renamed from: fT */
-    static final C0369av[] f3017fT = new C0369av[0];
+    static final Effect[] f3017fT = new Effect[0];
 
     /* renamed from: h */
     public final ObjectVector f3018h = new ObjectVector();
@@ -1241,56 +1241,56 @@ public final class CustomUnitMetadata implements UnitType {
     }
 
     /* renamed from: b */
-    public C0369av m3105b(String str) {
+    public Effect getEffect(String effectId) {
         boolean z = false;
-        if (str.toUpperCase().startsWith("CUSTOM:")) {
-            str = str.substring("CUSTOM:".length()).trim();
+        if (effectId.toUpperCase().startsWith("CUSTOM:")) {
+            effectId = effectId.substring("CUSTOM:".length()).trim();
             z = true;
         }
-        if (str.toUpperCase().startsWith("CUSTOM|")) {
-            str = str.substring("CUSTOM|".length()).trim();
+        if (effectId.toUpperCase().startsWith("CUSTOM|")) {
+            effectId = effectId.substring("CUSTOM|".length()).trim();
             z = true;
         }
         if (z) {
             Iterator it = this.f3094fR.iterator();
             while (it.hasNext()) {
-                C0369av c0369av = (C0369av) it.next();
-                if (str.equalsIgnoreCase(c0369av.name)) {
-                    return c0369av;
+                Effect effect = (Effect) it.next();
+                if (effectId.equalsIgnoreCase(effect.name)) {
+                    return effect;
                 }
             }
-            throw new C0395bl("Failed to find custom effect with the name:" + str);
-        } else if (str.contains(":")) {
-            throw new C0395bl("Unknown effect format:" + str + " expected built-in effect or CUSTOM:");
+            throw new C0395bl("Failed to find custom effect with the name:" + effectId);
+        } else if (effectId.contains(":")) {
+            throw new C0395bl("Unknown effect format:" + effectId + " expected built-in effect or CUSTOM:");
         } else {
-            if ("small".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2190a);
+            if ("small".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2190a);
             }
-            if ("medium".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2191b);
+            if ("medium".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2191b);
             }
-            if ("large".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2192c);
+            if ("large".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2192c);
             }
-            if ("smoke".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2193d);
+            if ("smoke".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2193d);
             }
-            if ("shockwave".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2194e);
+            if ("shockwave".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2194e);
             }
-            if ("largeExplosion".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2195f);
+            if ("largeExplosion".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2195f);
             }
-            if ("smallExplosion".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2196g);
+            if ("smallExplosion".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2196g);
             }
-            if ("resourcePoolSmoke".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2197h);
+            if ("resourcePoolSmoke".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2197h);
             }
-            if ("none".equalsIgnoreCase(str)) {
-                return new C0369av(EnumC0370aw.f2198i);
+            if ("none".equalsIgnoreCase(effectId)) {
+                return new Effect(EnumC0370aw.f2198i);
             }
-            throw new C0395bl("Failed to find built-in effect with the name:" + str);
+            throw new C0395bl("Failed to find built-in effect with the name:" + effectId);
         }
     }
 
@@ -1369,7 +1369,7 @@ public final class CustomUnitMetadata implements UnitType {
             if (this.core_displayLocaleKey != null) {
                 str = this.core_displayLocaleKey;
             }
-            this.f2968fY = LangLocale.m1608a("units." + str + ".name", m3488b, new Object[0]);
+            this.f2968fY = LangLocale.getI18NTextOrDefault("units." + str + ".name", m3488b, new Object[0]);
         }
         return this.f2968fY;
     }
@@ -1384,7 +1384,7 @@ public final class CustomUnitMetadata implements UnitType {
             if (this.core_displayLocaleKey != null) {
                 str = this.core_displayLocaleKey;
             }
-            this.f2969fZ = LangLocale.m1608a("units." + str + ".description", m3488b, new Object[0]);
+            this.f2969fZ = LangLocale.getI18NTextOrDefault("units." + str + ".description", m3488b, new Object[0]);
         }
         return this.f2969fZ;
     }

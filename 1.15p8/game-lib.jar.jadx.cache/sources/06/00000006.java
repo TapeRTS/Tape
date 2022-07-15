@@ -815,9 +815,9 @@ public abstract class Unit extends PhysicalObject {
             }
         } else {
             Builder.m2855K();
-            LaserDefence.m2899b();
-            Repairbay.m2883dp();
-            Tree.m3793b();
+            LaserDefence.load();
+            Repairbay.load();
+            Tree.load();
         }
         UnitType.m3702t();
     }
@@ -2133,7 +2133,7 @@ public abstract class Unit extends PhysicalObject {
     }
 
     /* renamed from: a_ */
-    public void mo3029a_(String str) {
+    public void type(String str) {
     }
 
     /* renamed from: cF */

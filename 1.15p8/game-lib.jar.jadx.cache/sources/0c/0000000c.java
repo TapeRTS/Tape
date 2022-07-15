@@ -3,7 +3,7 @@ package com.corrodinggames.rts.game;
 import android.graphics.Color;
 import android.graphics.Paint;
 import com.corrodinggames.rts.game.ai.AI;
-import com.corrodinggames.rts.game.units.C0579n;
+import com.corrodinggames.rts.game.units.DummyNonUnitWithTeam;
 import com.corrodinggames.rts.game.units.OrderableUnit;
 import com.corrodinggames.rts.game.units.Unit;
 import com.corrodinggames.rts.game.units.UnitType;
@@ -1195,8 +1195,8 @@ public abstract class Team extends SyncedObject implements Comparable {
         this.Tips_Modifier = "Note to modifiers: Changing credits will not allow you to cheat in multiplayer games, but it will only break sync";
         this.credits = 4000.0d;
         this.f1327n = 0.0d;
-        this.f1329p = C0579n.m2688a(this);
-        this.f1330q = C0579n.m2688a(this);
+        this.f1329p = DummyNonUnitWithTeam.m2688a(this);
+        this.f1330q = DummyNonUnitWithTeam.m2688a(this);
         this.f1331r = false;
         this.id = -1;
         this.f1320ar = -9999;
@@ -1924,20 +1924,20 @@ public abstract class Team extends SyncedObject implements Comparable {
 
     /* renamed from: a */
     public boolean m3961a(TeamCamp type, Team team) {
-        if (type == TeamCamp.f1365a) {
+        if (type == TeamCamp.own) {
             return team == this;
-        } else if (type == TeamCamp.f1370f) {
+        } else if (type == TeamCamp.any) {
             return true;
         } else {
-            if (type == TeamCamp.f1366b) {
+            if (type == TeamCamp.ally) {
                 return m3913d(team);
             }
-            if (type == TeamCamp.f1367c) {
+            if (type == TeamCamp.allyNotOwn) {
                 return team != this && m3913d(team);
-            } else if (type == TeamCamp.f1368d) {
+            } else if (type == TeamCamp.enemy) {
                 return m3925c(team);
             } else {
-                if (type != TeamCamp.f1369e) {
+                if (type != TeamCamp.neutral) {
                     throw new RuntimeException("Unsupported type: " + type);
                 }
                 return team == f1346g;

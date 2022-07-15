@@ -41,12 +41,12 @@ public class AirShip extends AbstractC0297b {
     float f1780f = 0.18f;
 
     /* renamed from: b */
-    public UnitType mo1775r() {
-        return UnitType.f1716m;
+    public UnitType getUnitType() {
+        return UnitType.airShip;
     }
 
     /* renamed from: c */
-    public static void m3665c() {
+    public static void load() {
         GameEngine gameEngine = GameEngine.getInstance();
         f1775b = gameEngine.graphics.loadImage(R.drawable.ship);
         f1776c = gameEngine.graphics.loadImage(R.drawable.ship_shadow);

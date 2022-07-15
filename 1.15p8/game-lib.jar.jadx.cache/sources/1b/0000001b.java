@@ -479,7 +479,7 @@ public class Root extends ScriptContext {
     }
 
     public String convertMapName(String str) {
-        return LangLocale.m1603b(convertMapNameWithoutTranslation(str));
+        return LangLocale.getMapI18NName(convertMapNameWithoutTranslation(str));
     }
 
     public String convertMapNameWithoutTranslation(String str) {
@@ -1853,7 +1853,7 @@ public class Root extends ScriptContext {
     }
 
     public boolean isLinux() {
-        return C0742g.m1596a() == Enum_System.f5027c;
+        return C0742g.m1596a() == Enum_System.Linux;
     }
 
     public boolean not(boolean z) {

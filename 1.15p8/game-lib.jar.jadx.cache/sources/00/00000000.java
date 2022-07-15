@@ -9,7 +9,6 @@ import com.corrodinggames.rts.game.ai.p010a.AbstractC0144a;
 import com.corrodinggames.rts.game.ai.p010a.EnumC0146b;
 import com.corrodinggames.rts.game.units.AttackMode;
 import com.corrodinggames.rts.game.units.C0236ak;
-import com.corrodinggames.rts.game.units.C0517f;
 import com.corrodinggames.rts.game.units.EnumC0295b;
 import com.corrodinggames.rts.game.units.MovementType;
 import com.corrodinggames.rts.game.units.OrderableUnit;
@@ -17,6 +16,7 @@ import com.corrodinggames.rts.game.units.Unit;
 import com.corrodinggames.rts.game.units.UnitType;
 import com.corrodinggames.rts.game.units.Waypoint;
 import com.corrodinggames.rts.game.units.WaypointType;
+import com.corrodinggames.rts.game.units.ZoneMarkerOrDamagingBorder;
 import com.corrodinggames.rts.game.units.air.AmphibiousJet;
 import com.corrodinggames.rts.game.units.buildings.AbstractC0483l;
 import com.corrodinggames.rts.game.units.buildings.AirFactory;
@@ -170,7 +170,7 @@ public final class AI extends Team {
     boolean f580bc;
 
     /* renamed from: bd */
-    C0517f f581bd;
+    ZoneMarkerOrDamagingBorder f581bd;
 
     /* renamed from: be */
     boolean f582be;
@@ -333,7 +333,7 @@ public final class AI extends Team {
 
     /* renamed from: a */
     public boolean m4375a(float f, float f2, float f3, float f4, MovementType movementType) {
-        if (movementType == MovementType.AIR || movementType == MovementType.NONE) {
+        if (movementType == MovementType.f1646d || movementType == MovementType.f1643a) {
             return true;
         }
         short m442b = C0955y.m442b(f, f2, movementType);
@@ -649,28 +649,28 @@ public final class AI extends Team {
             @Override // com.corrodinggames.rts.game.ai.AbstractC0153d
             /* renamed from: a */
             public boolean mo4289a(UnitType unitType) {
-                return AI.this.m4361a(unitType) && m4288a(unitType, MovementType.LAND);
+                return AI.this.m4361a(unitType) && m4288a(unitType, MovementType.f1644b);
             }
         };
         this.f593bp = new AbstractC0153d("attackingUnitsHover") { // from class: com.corrodinggames.rts.game.a.a.6
             @Override // com.corrodinggames.rts.game.ai.AbstractC0153d
             /* renamed from: a */
             public boolean mo4289a(UnitType unitType) {
-                return AI.this.m4361a(unitType) && m4288a(unitType, MovementType.HOVER);
+                return AI.this.m4361a(unitType) && m4288a(unitType, MovementType.f1648f);
             }
         };
         this.f594bq = new AbstractC0153d("attackingUnitsAir") { // from class: com.corrodinggames.rts.game.a.a.7
             @Override // com.corrodinggames.rts.game.ai.AbstractC0153d
             /* renamed from: a */
             public boolean mo4289a(UnitType unitType) {
-                return AI.this.m4361a(unitType) && m4288a(unitType, MovementType.AIR);
+                return AI.this.m4361a(unitType) && m4288a(unitType, MovementType.f1646d);
             }
         };
         this.f595br = new AbstractC0153d("attackingUnitsWater") { // from class: com.corrodinggames.rts.game.a.a.8
             @Override // com.corrodinggames.rts.game.ai.AbstractC0153d
             /* renamed from: a */
             public boolean mo4289a(UnitType unitType) {
-                return AI.this.m4361a(unitType) && m4288a(unitType, MovementType.WATER);
+                return AI.this.m4361a(unitType) && m4288a(unitType, MovementType.f1647e);
             }
         };
         this.f596bs = new AbstractC0153d("buildingUnits") { // from class: com.corrodinggames.rts.game.a.a.9
@@ -694,7 +694,7 @@ public final class AI extends Team {
                     if ((unitType instanceof CustomUnitMetadata) && ((CustomUnitMetadata) unitType).f2981fl) {
                         return false;
                     }
-                    if (unitType.mo3075o() == MovementType.AIR || unitType.mo3075o() == MovementType.HOVER || unitType.mo3075o() == MovementType.OVER_CLIFF_WATER) {
+                    if (unitType.mo3075o() == MovementType.f1646d || unitType.mo3075o() == MovementType.f1648f || unitType.mo3075o() == MovementType.f1650h) {
                         return true;
                     }
                     return false;
@@ -706,7 +706,7 @@ public final class AI extends Team {
             @Override // com.corrodinggames.rts.game.ai.AbstractC0153d
             /* renamed from: a */
             public boolean mo4289a(UnitType unitType) {
-                if (AI.this.f597bt.mo4289a(unitType) && unitType.mo3075o() == MovementType.AIR) {
+                if (AI.this.f597bt.mo4289a(unitType) && unitType.mo3075o() == MovementType.f1646d) {
                     return true;
                 }
                 return false;
@@ -716,7 +716,7 @@ public final class AI extends Team {
             @Override // com.corrodinggames.rts.game.ai.AbstractC0153d
             /* renamed from: a */
             public boolean mo4289a(UnitType unitType) {
-                if (AI.this.f597bt.mo4289a(unitType) && unitType.mo3075o() != MovementType.AIR) {
+                if (AI.this.f597bt.mo4289a(unitType) && unitType.mo3075o() != MovementType.f1646d) {
                     return true;
                 }
                 return false;
@@ -727,7 +727,7 @@ public final class AI extends Team {
             /* renamed from: a */
             public boolean mo4289a(UnitType unitType) {
                 if (unitType.mo3079m()) {
-                    if ((!(unitType instanceof CustomUnitMetadata) || !((CustomUnitMetadata) unitType).f2981fl) && unitType.mo3075o() != MovementType.WATER) {
+                    if ((!(unitType instanceof CustomUnitMetadata) || !((CustomUnitMetadata) unitType).f2981fl) && unitType.mo3075o() != MovementType.f1647e) {
                         return true;
                     }
                     return false;
@@ -741,7 +741,7 @@ public final class AI extends Team {
             public boolean mo4289a(UnitType unitType) {
                 Unit.m3768b(unitType);
                 if (unitType.mo3077n()) {
-                    if ((!(unitType instanceof CustomUnitMetadata) || !((CustomUnitMetadata) unitType).f2981fl) && unitType.mo3075o() != MovementType.WATER) {
+                    if ((!(unitType instanceof CustomUnitMetadata) || !((CustomUnitMetadata) unitType).f2981fl) && unitType.mo3075o() != MovementType.f1647e) {
                         return true;
                     }
                     return false;
@@ -838,7 +838,7 @@ public final class AI extends Team {
         this.f553aR = 7500 + (this.teamID * 5);
         this.f590bm = new Paint();
         this.f590bm.setColor(Color.m4733a(0, 255, 0));
-        this.f590bm.setStyle(Paint.Style.STROKE);
+        this.f590bm.setStyle(Paint.Style.f217b);
         this.f590bm.mo935a(true);
         game.m892a(this.f590bm, 14.0f);
         m4347ae();
@@ -1050,7 +1050,7 @@ public final class AI extends Team {
         int size = Unit.fastUnitList.size();
         for (int i2 = 0; i2 < size; i2++) {
             Unit unit = m485a[i2];
-            if (unit.team == this && (enumC0151b == EnumC0151b.include || !unit.f1603bE)) {
+            if (unit.team == this && (enumC0151b == EnumC0151b.f625a || !unit.f1603bE)) {
                 if (unit.unitType == unitType) {
                     i++;
                 }
@@ -1196,7 +1196,7 @@ public final class AI extends Team {
                         str4 = str4 + "\nlastAttemptedBuilding-cannotAffordBy: " + base.f672B.m3389a(false, true, 4, true);
                     }
                     String str5 = ((((str4 + "\nlastAttemptedBuildingCount: " + base.f673C) + "\nlastAttemptedBuildingFailed: " + base.f674D) + "\nlastUnitAttempt: " + base.f675E + " (" + base.f676F + " - " + base.f677G + ")") + "\nbuildBuildingDelay: " + base.f688e) + "\ncredits: " + CommonUtils.m1673c(this.credits) + " (x" + CommonUtils.m1645f(m3873z()) + ")";
-                    if (base.state == BaseStates.Pre) {
+                    if (base.state == BaseStates.f713a) {
                         str5 = str5 + "\nclaimedBaseTimer: " + base.claimedBaseTimer;
                     }
                     if (base.abandonedTimer > 100.0f) {
@@ -1312,11 +1312,11 @@ public final class AI extends Team {
                     break;
                 }
                 Unit unit2 = m485a[i];
-                if (!(unit2 instanceof C0517f)) {
+                if (!(unit2 instanceof ZoneMarkerOrDamagingBorder)) {
                     i++;
                 } else {
                     aiDebug("firstRunDelayed: Found damagingBorder");
-                    this.f581bd = (C0517f) unit2;
+                    this.f581bd = (ZoneMarkerOrDamagingBorder) unit2;
                     break;
                 }
             }
@@ -1335,10 +1335,10 @@ public final class AI extends Team {
                 for (int i2 = 0; i2 < Team.playerNumMax; i2++) {
                     Team team = Team.getTeam(i2);
                     if (team != null && team != this && (m4327e = m4327e(team)) != null) {
-                        if (!m4375a(m4327e2.x, m4327e2.y, m4327e.x, m4327e.y, MovementType.LAND)) {
+                        if (!m4375a(m4327e2.x, m4327e2.y, m4327e.x, m4327e.y, MovementType.f1644b)) {
                             this.f582be = false;
                         }
-                        if (!m4375a(m4327e2.x, m4327e2.y, m4327e.x, m4327e.y, MovementType.HOVER)) {
+                        if (!m4375a(m4327e2.x, m4327e2.y, m4327e.x, m4327e.y, MovementType.f1648f)) {
                             this.f583bf = false;
                         }
                     }
@@ -1346,10 +1346,10 @@ public final class AI extends Team {
                 Iterator it = gameEngine.map.resPools.iterator();
                 while (it.hasNext()) {
                     PointF m4158a = gameEngine.map.m4158a((Point) it.next());
-                    if (!m4375a(m4327e2.x, m4327e2.y, m4158a.x, m4158a.y + gameEngine.map.pixel_Height, MovementType.LAND)) {
+                    if (!m4375a(m4327e2.x, m4327e2.y, m4158a.x, m4158a.y + gameEngine.map.pixel_Height, MovementType.f1644b)) {
                         this.f584bg = false;
                     }
-                    if (!m4375a(m4327e2.x, m4327e2.y, m4158a.x, m4158a.y + gameEngine.map.pixel_Height, MovementType.HOVER)) {
+                    if (!m4375a(m4327e2.x, m4327e2.y, m4158a.x, m4158a.y + gameEngine.map.pixel_Height, MovementType.f1648f)) {
                         this.f585bh = false;
                     }
                 }
@@ -1475,7 +1475,7 @@ public final class AI extends Team {
                         m4355a(orderableUnit, AmphibiousJet.f1806z.m3834L());
                     }
                 }
-                if (orderableUnit.mo2519bd() == EnumC0295b.bomber && orderableUnit.m2554ap() && orderableUnit.m2569aa() != null) {
+                if (orderableUnit.mo2519bd() == EnumC0295b.f1772d && orderableUnit.m2554ap() && orderableUnit.m2569aa() != null) {
                     C0678e m2261a = GameEngine.getInstance().f5867cf.m2261a(this);
                     m2261a.m2092a(orderableUnit);
                     m2261a.m2094a(orderableUnit.m2569aa());
@@ -1496,12 +1496,12 @@ public final class AI extends Team {
             }
             if (z) {
                 if (this.f557aV) {
-                    return AttackMode.aggressive;
+                    return AttackMode.f1397f;
                 }
-                return AttackMode.outOfRange;
+                return AttackMode.f1392a;
             }
         }
-        return AttackMode.onlyInRange;
+        return AttackMode.f1393b;
     }
 
     public ArrayList ai() {
@@ -1553,12 +1553,12 @@ public final class AI extends Team {
                         orderableUnit.f3703av = m4324f(orderableUnit);
                         if (orderableUnit.f3703av != null && base != orderableUnit.f3703av) {
                             if (orderableUnit.mo2975bH()) {
-                                orderableUnit.f3704aw = m4375a(unit.x, unit.y, orderableUnit.f3703av.x, orderableUnit.f3703av.y, MovementType.LAND);
+                                orderableUnit.f3704aw = m4375a(unit.x, unit.y, orderableUnit.f3703av.x, orderableUnit.f3703av.y, MovementType.f1644b);
                                 if (!orderableUnit.f3704aw && orderableUnit.getUnitType().mo3073p()) {
-                                    orderableUnit.f3704aw = m4375a(unit.x, unit.y + 15.0f, orderableUnit.f3703av.x, orderableUnit.f3703av.y, MovementType.LAND);
+                                    orderableUnit.f3704aw = m4375a(unit.x, unit.y + 15.0f, orderableUnit.f3703av.x, orderableUnit.f3703av.y, MovementType.f1644b);
                                 }
                             } else {
-                                orderableUnit.f3704aw = m4375a(unit.x, unit.y, orderableUnit.f3703av.x, orderableUnit.f3703av.y, MovementType.LAND);
+                                orderableUnit.f3704aw = m4375a(unit.x, unit.y, orderableUnit.f3703av.x, orderableUnit.f3703av.y, MovementType.f1644b);
                             }
                         }
                     }
@@ -1595,7 +1595,7 @@ public final class AI extends Team {
             Iterator it3 = this.f588bk.iterator();
             while (it3.hasNext()) {
                 Zone zone = (Zone) it3.next();
-                if ((zone instanceof Base) && ((Base) zone).state == BaseStates.Pre) {
+                if ((zone instanceof Base) && ((Base) zone).state == BaseStates.f713a) {
                     i3++;
                 }
             }
@@ -1613,8 +1613,8 @@ public final class AI extends Team {
                         this.f552aQ = 2000.0f;
                         Base base2 = new Base(this, randomResPool.x, randomResPool.y);
                         base2.radius = 360.0f;
-                        base2.state = BaseStates.Pre;
-                        base2.type = BaseType.ResourceOutpost;
+                        base2.state = BaseStates.f713a;
+                        base2.type = BaseType.f718b;
                         this.f565at++;
                     }
                 }
@@ -1626,7 +1626,7 @@ public final class AI extends Team {
             Iterator it4 = this.f588bk.iterator();
             while (it4.hasNext()) {
                 Zone zone2 = (Zone) it4.next();
-                if ((zone2 instanceof Base) && ((Base) zone2).type == BaseType.ForwardOutpost) {
+                if ((zone2 instanceof Base) && ((Base) zone2).type == BaseType.f719c) {
                     i4++;
                 }
             }
@@ -1638,8 +1638,8 @@ public final class AI extends Team {
                     this.f553aR = 5000.0f;
                     Base base3 = new Base(this, pointF.x, pointF.y);
                     base3.radius = 310.0f;
-                    base3.state = BaseStates.Pre;
-                    base3.type = BaseType.ForwardOutpost;
+                    base3.state = BaseStates.f713a;
+                    base3.type = BaseType.f719c;
                     this.f565at++;
                 }
             }
@@ -1657,7 +1657,7 @@ public final class AI extends Team {
                     if (orderableUnit3.f3702au != null && orderableUnit3.f3702au.mo4257b()) {
                         this.defendingCount++;
                     } else if (m4322h(orderableUnit3) && !orderableUnit3.f1603bE) {
-                        if (orderableUnit3.getMovementType() == MovementType.WATER) {
+                        if (orderableUnit3.getMovementType() == MovementType.f1647e) {
                             this.f561aZ++;
                         } else {
                             this.attackingCount++;
@@ -1770,7 +1770,7 @@ public final class AI extends Team {
                                         if (a.mo3597m(orderableUnit5)) {
                                             z4 = true;
                                         }
-                                        if (a.mo2698e() == EnumC0220u.targetGround) {
+                                        if (a.mo2698e() == EnumC0220u.f1453g) {
                                             z4 = true;
                                         }
                                         if (!a.isAvailable(orderableUnit5)) {
@@ -1954,8 +1954,8 @@ public final class AI extends Team {
                 if (unit.team == this && (unit instanceof CommandCenter)) {
                     Base base = new Base(this, unit.x, unit.y);
                     base.radius = 420.0f;
-                    base.state = BaseStates.Active;
-                    base.type = BaseType.Main;
+                    base.state = BaseStates.f715c;
+                    base.type = BaseType.f717a;
                     numOfBases++;
                     break;
                 }
@@ -1970,8 +1970,8 @@ public final class AI extends Team {
                     if (unit2.team == this && this.f600bw.m4286b(unit2.getUnitType())) {
                         Base base2 = new Base(this, unit2.x, unit2.y);
                         base2.radius = 420.0f;
-                        base2.state = BaseStates.Active;
-                        base2.type = BaseType.Main;
+                        base2.state = BaseStates.f715c;
+                        base2.type = BaseType.f717a;
                         numOfBases++;
                         break;
                     }
@@ -1999,8 +1999,8 @@ public final class AI extends Team {
                         if (z) {
                             Base base3 = new Base(this, unit3.x, unit3.y);
                             base3.radius = 420.0f;
-                            base3.state = BaseStates.Active;
-                            base3.type = BaseType.Main;
+                            base3.state = BaseStates.f715c;
+                            base3.type = BaseType.f717a;
                             numOfBases++;
                             break;
                         }
@@ -2017,8 +2017,8 @@ public final class AI extends Team {
                     if (unit4.team == this && (unit4 instanceof OrderableUnit) && ((OrderableUnit) unit4).m2562ah()) {
                         Base base4 = new Base(this, unit4.x, unit4.y);
                         base4.radius = 420.0f;
-                        base4.state = BaseStates.Active;
-                        base4.type = BaseType.Main;
+                        base4.state = BaseStates.f715c;
+                        base4.type = BaseType.f717a;
                         int i = numOfBases + 1;
                         break;
                     }
@@ -2026,7 +2026,7 @@ public final class AI extends Team {
             }
             if (!this.f580bc) {
                 this.f580bc = true;
-                if (m4369a(this.f602by, EnumC0151b.include) >= 1) {
+                if (m4369a(this.f602by, EnumC0151b.f625a) >= 1) {
                     for (int i2 = 0; i2 < game.map.resPools.size(); i2++) {
                         Point point = (Point) game.map.resPools.get(i2);
                         game.map.fromGrid(point.game, point.y);
@@ -2036,8 +2036,8 @@ public final class AI extends Team {
                         if (m4336b(pointF.x, pointF.y) == null && m4370a(this.f602by, pointF.x, pointF.y, 200) >= 1 && m4335b(pointF)) {
                             Base base5 = new Base(this, pointF.x, pointF.y);
                             base5.radius = 360.0f;
-                            base5.state = BaseStates.Pre;
-                            base5.type = BaseType.ResourceOutpost;
+                            base5.state = BaseStates.f713a;
+                            base5.type = BaseType.f718b;
                         }
                     }
                 }
@@ -2072,7 +2072,7 @@ public final class AI extends Team {
                         m2261a2.m2075h();
                     }
                 }
-                if (orderableUnit3.mo2561ai() && m4320i(orderableUnit3) && (waypoint = orderableUnit3.getActiveWaypoint()) != null && waypoint.getType() == WaypointType.build && orderableUnit3.f3678O > 700.0f) {
+                if (orderableUnit3.mo2561ai() && m4320i(orderableUnit3) && (waypoint = orderableUnit3.getActiveWaypoint()) != null && waypoint.getType() == WaypointType.f1753c && orderableUnit3.f3678O > 700.0f) {
                     C0678e m2261a3 = game.f5867cf.m2261a(this);
                     m2261a3.m2092a(orderableUnit3);
                     m2261a3.m2075h();

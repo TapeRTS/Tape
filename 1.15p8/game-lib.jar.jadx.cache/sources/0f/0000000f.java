@@ -41,12 +41,12 @@ public class HeavyHovertank extends AbstractC0507h {
     Rect f3434f = new Rect();
 
     /* renamed from: b */
-    public UnitType mo1775r() {
-        return UnitType.f1727x;
+    public UnitType getUnitType() {
+        return UnitType.heavyHoverTank;
     }
 
     /* renamed from: c */
-    public static void m2842c() {
+    public static void load() {
         GameEngine game = GameEngine.getInstance();
         f3430c = game.graphics.loadImage(R.drawable.heavy_hover_tank);
         f3429b = game.graphics.loadImage(R.drawable.heavy_hover_tank_dead);

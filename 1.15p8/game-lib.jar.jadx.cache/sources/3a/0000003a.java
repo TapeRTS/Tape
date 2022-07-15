@@ -21,8 +21,8 @@ import java.util.ArrayList;
 
 /* renamed from: com.corrodinggames.rts.game.units.custom.av */
 /* loaded from: game-lib.jar:com/corrodinggames/rts/game/units/custom/av.class */
-public class C0369av {
-    public static final C0369av defaultEffectTemplate = new C0369av("default");
+public class Effect {
+    public static final Effect defaultEffectTemplate = new Effect("default");
     public String name;
     private EnumC0370aw builtInEffect;
     public ImageStrip imageStrip;
@@ -95,11 +95,11 @@ public class C0369av {
     public C0392bi alsoPlaySound;
     public static ArrayList fields;
 
-    public C0369av(EnumC0370aw enumC0370aw) {
+    public Effect(EnumC0370aw enumC0370aw) {
         this.builtInEffect = null;
         this.spawnChance = 1.0f;
         this.life = 200.0f;
-        this.priority = EnumC0668h.f4399c;
+        this.priority = EnumC0668h.high;
         this.scaleTo = 1.0f;
         this.scaleFrom = 1.0f;
         this.alpha = 1.0f;
@@ -111,11 +111,11 @@ public class C0369av {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0369av(String str) {
+    public Effect(String str) {
         this.builtInEffect = null;
         this.spawnChance = 1.0f;
         this.life = 200.0f;
-        this.priority = EnumC0668h.f4399c;
+        this.priority = EnumC0668h.high;
         this.scaleTo = 1.0f;
         this.scaleFrom = 1.0f;
         this.alpha = 1.0f;
@@ -138,31 +138,31 @@ public class C0369av {
             }
             return null;
         } else if (this.builtInEffect != null) {
-            if (this.builtInEffect == EnumC0370aw.f2190a) {
+            if (this.builtInEffect == EnumC0370aw.small) {
                 effectObject = gameEngine.effects.emitSmalFlame(f, f2, f3, f4);
-            } else if (this.builtInEffect == EnumC0370aw.f2191b) {
+            } else if (this.builtInEffect == EnumC0370aw.medium) {
                 effectObject = gameEngine.effects.m2213b(f, f2, f3, f4, 0);
                 if (effectObject != null) {
                     effectObject.f4287H = 0.75f;
                     effectObject.f4286G = 0.75f;
                 }
-            } else if (this.builtInEffect == EnumC0370aw.f2192c) {
+            } else if (this.builtInEffect == EnumC0370aw.large) {
                 effectObject = gameEngine.effects.m2213b(f, f2, f3, f4, 0);
-            } else if (this.builtInEffect == EnumC0370aw.f2193d) {
+            } else if (this.builtInEffect == EnumC0370aw.smoke) {
                 effectObject = gameEngine.effects.m2208c(f, f2, f3, f4, 0);
-            } else if (this.builtInEffect == EnumC0370aw.f2194e) {
+            } else if (this.builtInEffect == EnumC0370aw.shockwave) {
                 effectObject = gameEngine.effects.m2205d(f, f2, f3, 0);
-            } else if (this.builtInEffect == EnumC0370aw.f2195f) {
+            } else if (this.builtInEffect == EnumC0370aw.largeExplosion) {
                 gameEngine.effects.m2237a(f, f2, f3);
                 effectObject = null;
-            } else if (this.builtInEffect == EnumC0370aw.f2196g) {
+            } else if (this.builtInEffect == EnumC0370aw.smallExplosion) {
                 effectObject = gameEngine.effects.emitSmalExplosion(f, f2, f3);
-            } else if (this.builtInEffect == EnumC0370aw.f2197h) {
+            } else if (this.builtInEffect == EnumC0370aw.resourcePoolSmoke) {
                 Emitter.m2195a(f, f2).f4380j = -6684775;
                 Emitter m2191b = Emitter.m2191b(f, f2);
                 m2191b.f4362a = 500.0f;
                 m2191b.f4380j = -6684775;
-                gameEngine.effects.m2210b(EnumC0668h.f4401e);
+                gameEngine.effects.m2210b(EnumC0668h.critical);
                 EffectObject m2207c = gameEngine.effects.m2207c(f, f2, f3, -1127220);
                 if (m2207c != null) {
                     m2207c.f4287H = 0.15f;
@@ -174,7 +174,7 @@ public class C0369av {
                     m2207c.f4336y = -13378253;
                 }
                 effectObject = null;
-            } else if (this.builtInEffect == EnumC0370aw.f2198i) {
+            } else if (this.builtInEffect == EnumC0370aw.noneExplosion) {
                 return null;
             } else {
                 throw new RuntimeException("Unhandled built-in type:" + this.builtInEffect);
@@ -207,7 +207,7 @@ public class C0369av {
                 z2 = true;
                 z = true;
             }
-            EffectObject emitEffect = gameEngine.effects.emitEffect(f, f2, f3, EffectType.f4274a, z, this.priority);
+            EffectObject emitEffect = gameEngine.effects.emitEffect(f, f2, f3, EffectType.custom, z, this.priority);
             if (emitEffect == null) {
                 return null;
             }

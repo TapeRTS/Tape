@@ -94,7 +94,7 @@ public class MissionEngine extends SyncedObject {
     public boolean f6071N;
 
     /* renamed from: f */
-    WinConditions f6086f = WinConditions.allUnitsAndBuildings;
+    WinConditions f6086f = WinConditions.f6133b;
 
     /* renamed from: g */
     public ArrayList f6087g = new ArrayList();
@@ -133,7 +133,7 @@ public class MissionEngine extends SyncedObject {
     float f6098B = 0.0f;
 
     /* renamed from: C */
-    EnumC0888h f6099C = EnumC0888h.normal;
+    EnumC0888h f6099C = EnumC0888h.f6121a;
 
     /* renamed from: D */
     ArrayList f6100D = new ArrayList();
@@ -325,7 +325,7 @@ public class MissionEngine extends SyncedObject {
         if (z2) {
             GameEngine.log("MissionEngine", "Defaulting to skirmish");
             this.skirmish = true;
-            this.mapWinCondition = WinConditions.noConstructionOrTech;
+            this.mapWinCondition = WinConditions.f6137f;
             return;
         }
         this.f6079k = "survival".equalsIgnoreCase(mapInfo.getProperty("type"));
@@ -356,7 +356,7 @@ public class MissionEngine extends SyncedObject {
         }
         this.skirmish = "skirmish".equalsIgnoreCase(mapInfo.getProperty("type"));
         if (this.skirmish) {
-            this.mapWinCondition = WinConditions.noConstructionOrTech;
+            this.mapWinCondition = WinConditions.f6137f;
         }
         this.f6083o = "true".equalsIgnoreCase(mapInfo.getProperty("shareFogWithAllies"));
         String winConditionText = mapInfo.getProperty("winCondition");
@@ -365,19 +365,19 @@ public class MissionEngine extends SyncedObject {
         }
         if (winConditionText != null) {
             if (winConditionText.equalsIgnoreCase("none")) {
-                this.mapWinCondition = WinConditions.none;
+                this.mapWinCondition = WinConditions.f6132a;
             } else if (winConditionText.equalsIgnoreCase("allUnitsAndBuildings")) {
-                this.mapWinCondition = WinConditions.allUnitsAndBuildings;
+                this.mapWinCondition = WinConditions.f6133b;
             } else if (winConditionText.equalsIgnoreCase("allBuildings")) {
-                this.mapWinCondition = WinConditions.allBuildings;
+                this.mapWinCondition = WinConditions.f6134c;
             } else if (winConditionText.equalsIgnoreCase("mainBuilings")) {
-                this.mapWinCondition = WinConditions.mainBuildings;
+                this.mapWinCondition = WinConditions.f6135d;
             } else if (winConditionText.equalsIgnoreCase("mainBuildings")) {
-                this.mapWinCondition = WinConditions.mainBuildings;
+                this.mapWinCondition = WinConditions.f6135d;
             } else if (winConditionText.equalsIgnoreCase("commandCenter")) {
-                this.mapWinCondition = WinConditions.commandCenter;
+                this.mapWinCondition = WinConditions.f6136e;
             } else if (winConditionText.equalsIgnoreCase("requiredObjectives")) {
-                this.mapWinCondition = WinConditions.requiredObjectives;
+                this.mapWinCondition = WinConditions.f6138g;
             } else {
                 throw new C0173f("unknown win condition:" + winConditionText);
             }
@@ -605,7 +605,7 @@ public class MissionEngine extends SyncedObject {
         Iterator it = this.f6102J.iterator();
         while (it.hasNext()) {
             C0867a c0867a = (C0867a) it.next();
-            if (c0867a.f6011g == EnumC0874e.objective) {
+            if (c0867a.f6011g == EnumC0874e.f6054a) {
                 boolean z = false;
                 Iterator it2 = this.f6087g.iterator();
                 while (it2.hasNext()) {
@@ -689,7 +689,7 @@ public class MissionEngine extends SyncedObject {
             Iterator it = this.f6102J.iterator();
             while (it.hasNext()) {
                 C0867a c0867a = (C0867a) it.next();
-                if (c0867a.f6011g == EnumC0874e.mapText && c0867a.f6014j) {
+                if (c0867a.f6011g == EnumC0874e.f6060g && c0867a.f6014j) {
                     float m782b = c0867a.m782b() - gameEngine.viewpointX_rounded;
                     float m778c = c0867a.m778c() - gameEngine.viewpointY_rounded;
                     float f2 = m782b * gameEngine.viewpointZoom;
@@ -791,19 +791,19 @@ public class MissionEngine extends SyncedObject {
     public void m733f() {
         this.f6110S.clear();
         m747a(this.f6110S, "scout", 0.7f);
-        m748a(this.f6110S, UnitType.f1712i, 2.1f);
+        m748a(this.f6110S, UnitType.tank, 2.1f);
         m747a(this.f6110S, "mechGun", 1.0f);
         m747a(this.f6110S, "lightGunship", 2.8f);
-        m748a(this.f6110S, UnitType.f1713j, 1.9f);
-        m748a(this.f6110S, UnitType.f1715l, 0.8f);
-        m748a(this.f6110S, UnitType.f1726w, 1.0f);
-        m748a(this.f6110S, UnitType.f1727x, 0.8f);
-        m748a(this.f6110S, UnitType.f1717n, 0.7f);
+        m748a(this.f6110S, UnitType.hoverTank, 1.9f);
+        m748a(this.f6110S, UnitType.helicopter, 0.8f);
+        m748a(this.f6110S, UnitType.heavyTank, 1.0f);
+        m748a(this.f6110S, UnitType.heavyHoverTank, 0.8f);
+        m748a(this.f6110S, UnitType.gunShip, 0.7f);
         m747a(this.f6110S, "plasmaTank", 0.6f);
         m747a(this.f6110S, "missileAirship", 0.4f);
         this.f6111T.clear();
-        m748a(this.f6111T, UnitType.f1680F, 1.0f);
-        m748a(this.f6111T, UnitType.f1689O, 0.5f);
+        m748a(this.f6111T, UnitType.experimentalTank, 1.0f);
+        m748a(this.f6111T, UnitType.experimentalHoverTank, 0.5f);
     }
 
     /* renamed from: a */
@@ -814,7 +814,7 @@ public class MissionEngine extends SyncedObject {
     /* renamed from: a */
     public void m748a(ArrayList arrayList, com.corrodinggames.rts.game.units.UnitType unitType, float f) {
         if (unitType == null) {
-            unitType = UnitType.f1712i;
+            unitType = UnitType.tank;
         }
         com.corrodinggames.rts.game.units.UnitType m3101c = CustomUnitMetadata.m3101c(unitType);
         if (m3101c != null) {
@@ -885,33 +885,33 @@ public class MissionEngine extends SyncedObject {
         int i = this.f6092v;
         UnitType unitType = null;
         if (this.f6084p) {
-            unitType = UnitType.f1723t;
+            unitType = UnitType.ladybug;
         } else {
             if (this.f6091u == 0) {
                 i++;
-                unitType = UnitType.f1712i;
+                unitType = UnitType.tank;
             }
             if (this.f6091u == 1) {
-                unitType = UnitType.f1713j;
+                unitType = UnitType.hoverTank;
             }
             if (this.f6091u == 2) {
-                unitType = UnitType.f1715l;
+                unitType = UnitType.helicopter;
             }
             if (this.f6091u == 3) {
                 i = this.f6093w;
-                unitType = UnitType.f1726w;
+                unitType = UnitType.heavyTank;
             }
             if (this.f6091u == 4) {
                 i = this.f6093w;
-                unitType = UnitType.f1727x;
+                unitType = UnitType.heavyHoverTank;
                 if (this.f6093w % 2 == 0) {
-                    unitType = UnitType.f1717n;
+                    unitType = UnitType.gunShip;
                 }
             }
             if (this.f6091u == 5) {
                 c0889i.f6123a = true;
                 i = 1;
-                unitType = UnitType.f1680F;
+                unitType = UnitType.experimentalTank;
             }
             if (z) {
                 this.f6091u++;
@@ -1058,9 +1058,9 @@ public class MissionEngine extends SyncedObject {
             if (!gameEngine.f5976dq && !gameEngine.f5979dt && !gameEngine.replayEngine.isPlaying() && !z && !z2) {
                 boolean z3 = true;
                 boolean z4 = true;
-                if (this.mapWinCondition == WinConditions.none) {
+                if (this.mapWinCondition == WinConditions.f6132a) {
                     z3 = false;
-                } else if (this.mapWinCondition == WinConditions.requiredObjectives) {
+                } else if (this.mapWinCondition == WinConditions.f6138g) {
                     Iterator it2 = this.f6087g.iterator();
                     while (it2.hasNext()) {
                         if (!((C0893m) it2.next()).m720b()) {
@@ -1080,9 +1080,9 @@ public class MissionEngine extends SyncedObject {
                         }
                     }
                 }
-                if (this.f6086f == WinConditions.none) {
+                if (this.f6086f == WinConditions.f6132a) {
                     z4 = false;
-                } else if (this.f6086f == WinConditions.requiredObjectives) {
+                } else if (this.f6086f == WinConditions.f6138g) {
                     z4 = false;
                 } else if (gameEngine.playerTeam != null) {
                     Iterator it4 = Unit.fastUnitList.iterator();
@@ -1129,25 +1129,25 @@ public class MissionEngine extends SyncedObject {
 
     /* renamed from: a */
     public boolean m750a(WinConditions winConditions, Unit unit) {
-        if (!(unit instanceof OrderableUnit) || unit.dead || unit.mo3187cQ() || winConditions == WinConditions.none) {
+        if (!(unit instanceof OrderableUnit) || unit.dead || unit.mo3187cQ() || winConditions == WinConditions.f6132a) {
             return false;
         }
-        if (winConditions == WinConditions.allUnitsAndBuildings) {
+        if (winConditions == WinConditions.f6133b) {
             return true;
         }
-        if (winConditions == WinConditions.allBuildings) {
+        if (winConditions == WinConditions.f6134c) {
             return unit.mo2975bH();
         }
-        if (winConditions == WinConditions.commandCenter) {
+        if (winConditions == WinConditions.f6136e) {
             return (unit instanceof CommandCenter) || unit.f1606bH;
-        } else if (winConditions == WinConditions.mainBuildings) {
+        } else if (winConditions == WinConditions.f6135d) {
             return unit.mo2975bH() && unit.mo2879bI() && !(unit instanceof Turret) && !(unit instanceof Extractor);
-        } else if (winConditions == WinConditions.noConstructionOrTech) {
+        } else if (winConditions == WinConditions.f6137f) {
             if (unit.mo2879bI() || unit.mo2560aj()) {
                 return true;
             }
             return false;
-        } else if (winConditions == WinConditions.requiredObjectives) {
+        } else if (winConditions == WinConditions.f6138g) {
             return false;
         } else {
             return false;

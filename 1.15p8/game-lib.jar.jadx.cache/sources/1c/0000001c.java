@@ -707,12 +707,12 @@ public class CustomUnitMetadataFactory {
                             if (unitType2 == null) {
                                 throw new C0395bl("Could not find canBuild target:" + c0327d.f2042j);
                             }
-                        } else if (c0327d.f2071aG != EnumC0329f.f2082b) {
+                        } else if (c0327d.f2071aG != EnumC0329f.convert) {
                             throw new C0395bl("'Target' required for action:" + c0327d.m3617a());
                         }
                         for (int i5 = 1; i5 <= 3; i5++) {
                             ArrayList mo3132a5 = unitType.mo3132a(i5);
-                            if (c0327d.f2071aG == EnumC0329f.f2081a) {
+                            if (c0327d.f2071aG == EnumC0329f.build) {
                                 if (unitType2.mo3085j() || c0327d.f2007aE) {
                                     c0211l = new C0221v(unitType2, c0327d.f2006aD, null);
                                     c0211l.f1436g = C0326c.m3622a(c0327d);
@@ -720,7 +720,7 @@ public class CustomUnitMetadataFactory {
                                     c0211l = new C0211l(unitType2, null);
                                     c0211l.f1436g = C0326c.m3622a(c0327d);
                                 }
-                            } else if (c0327d.f2071aG == EnumC0329f.f2082b) {
+                            } else if (c0327d.f2071aG == EnumC0329f.convert) {
                                 c0211l = new C0330g(c0327d, CustomUnitMetadata.m3129a(unitType2));
                             } else {
                                 throw new C0395bl("Could not find actionType:" + c0327d.f2071aG);
@@ -879,7 +879,7 @@ public class CustomUnitMetadataFactory {
                 throw new RuntimeException("Failed to open unit config file:" + filename);
             }
             BufferedInputStream bufferedInputStream = new BufferedInputStream(m3547b);
-            m3581a(tookTime, EnumC0336af.f2144g);
+            m3581a(tookTime, EnumC0336af.iniOpen);
             loadNumber++;
             if (mod != null) {
                 f2123b++;
@@ -898,7 +898,7 @@ public class CustomUnitMetadataFactory {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            m3581a(tookTime2, EnumC0336af.f2145h);
+            m3581a(tookTime2, EnumC0336af.iniClose);
             return readUnitConfig;
         } catch (RuntimeException e2) {
             m3561a(filename, e2, mod);
@@ -1089,7 +1089,7 @@ public class CustomUnitMetadataFactory {
                     } else {
                         long tookTime = C0651bl.getTookTime();
                         m3565a(str6, mod2, str2, str3);
-                        m3581a(tookTime, EnumC0336af.f2143f);
+                        m3581a(tookTime, EnumC0336af.unitParse);
                     }
                 } else if (str5.toLowerCase(Locale.ENGLISH).endsWith(".tmx")) {
                     String str7 = str + "/" + str5;
@@ -1139,7 +1139,7 @@ public class CustomUnitMetadataFactory {
             long tookTime = C0651bl.getTookTime();
             try {
                 UnitConfig unitConfig = new UnitConfig(inputStream, filename);
-                m3581a(tookTime, EnumC0336af.f2142e);
+                m3581a(tookTime, EnumC0336af.iniParse);
                 CustomUnitMetadata customUnitMetadata = new CustomUnitMetadata();
                 if (unitConfig.getStaticBooleanValue("core", "dont_load", (Boolean) false).booleanValue()) {
                     return null;
@@ -1179,7 +1179,7 @@ public class CustomUnitMetadataFactory {
                     m3576a(customUnitMetadata, unitConfig, str3, str3, 0);
                 }
                 C0424a.m3266a(customUnitMetadata, unitConfig);
-                m3581a(tookTime2, EnumC0336af.f2146i);
+                m3581a(tookTime2, EnumC0336af.iniSetup);
                 customUnitMetadata.core_name = unitConfig.getStaticStringValueNoNull("core", "name");
                 customUnitMetadata.f2734E = unitConfig.m628c();
                 if (customUnitMetadata.core_name.equals("self")) {
@@ -1263,9 +1263,9 @@ public class CustomUnitMetadataFactory {
                 customUnitMetadata.graphics_default_frame = unitConfig.getStaticIntegerValue("graphics", "default_frame", (Integer) 0).intValue();
                 customUnitMetadata.graphics_image_offsetX = unitConfig.getStaticIntegerValue("graphics", "image_offsetX", (Integer) 0).intValue();
                 customUnitMetadata.graphics_image_offsetY = unitConfig.getStaticIntegerValue("graphics", "image_offsetY", (Integer) 0).intValue();
-                customUnitMetadata.hueColor = HueColor.PureGreen;
+                customUnitMetadata.hueColor = HueColor.pureGreen;
                 if (unitConfig.getStaticBooleanValue("graphics", "teamColorsUseHue", (Boolean) false).booleanValue()) {
-                    customUnitMetadata.hueColor = HueColor.HueAdd;
+                    customUnitMetadata.hueColor = HueColor.hueAdd;
                 }
                 String staticStringValue4 = unitConfig.getStaticStringValue("graphics", "teamColoringMode", (String) null);
                 if (staticStringValue4 != null) {
@@ -1273,13 +1273,13 @@ public class CustomUnitMetadataFactory {
                         throw new C0395bl("Cannot use teamColoringMode and teamColorsUseHue at the same time");
                     }
                     if (staticStringValue4.equalsIgnoreCase("pureGreen")) {
-                        customUnitMetadata.hueColor = HueColor.PureGreen;
+                        customUnitMetadata.hueColor = HueColor.pureGreen;
                     } else if (staticStringValue4.equalsIgnoreCase("hueAdd")) {
-                        customUnitMetadata.hueColor = HueColor.HueAdd;
+                        customUnitMetadata.hueColor = HueColor.hueAdd;
                     } else if (staticStringValue4.equalsIgnoreCase("hueShift")) {
-                        customUnitMetadata.hueColor = HueColor.HueShift;
+                        customUnitMetadata.hueColor = HueColor.hueShift;
                     } else if (staticStringValue4.equalsIgnoreCase("disabled")) {
-                        customUnitMetadata.hueColor = HueColor.Disabled;
+                        customUnitMetadata.hueColor = HueColor.disabled;
                     } else {
                         throw new C0395bl("Unknown teamColoringMode:" + staticStringValue4);
                     }
@@ -1431,7 +1431,7 @@ public class CustomUnitMetadataFactory {
                 if (!unitConfig.getStaticBooleanValue("core", "autoTriggerCooldownTime_allowDangerousHighCPU", (Boolean) false).booleanValue() && customUnitMetadata.f3055bV < 5.0f) {
                     throw new RuntimeException("autoTriggerCooldownTime cannot be this low (without override). Note this cooldown is only applied after triggering an action not for the detection.");
                 }
-                customUnitMetadata.f3056bW = (EnumC0443s) unitConfig.getEnumValue("core", "autoTriggerCheckRate", EnumC0443s.f3157a, EnumC0443s.class);
+                customUnitMetadata.f3056bW = (EnumC0443s) unitConfig.getEnumValue("core", "autoTriggerCheckRate", EnumC0443s.everyFrame, EnumC0443s.class);
                 customUnitMetadata.f3064cA.f2169b = unitConfig.m611g("core", "mass");
                 customUnitMetadata.f2805bX = unitConfig.getStaticBooleanValue("core", "availableInDemo", (Boolean) true).booleanValue();
                 customUnitMetadata.f2806bY = unitConfig.getStaticBooleanValue("core", "isLocked", (Boolean) false).booleanValue();
@@ -1532,21 +1532,21 @@ public class CustomUnitMetadataFactory {
                 Iterator it6 = unitConfig.m618e("effect_").iterator();
                 while (it6.hasNext()) {
                     String str9 = (String) it6.next();
-                    C0369av c0369av = new C0369av(str9.substring("effect_".length()));
-                    c0369av.m3494a(customUnitMetadata, unitConfig, str9);
-                    customUnitMetadata.f3094fR.add(c0369av);
+                    Effect effect = new Effect(str9.substring("effect_".length()));
+                    effect.m3494a(customUnitMetadata, unitConfig, str9);
+                    customUnitMetadata.f3094fR.add(effect);
                 }
                 Iterator it7 = customUnitMetadata.f3094fR.iterator();
                 while (it7.hasNext()) {
-                    C0369av c0369av2 = (C0369av) it7.next();
-                    if (c0369av2.alsoEmitEffects != null) {
-                        c0369av2.alsoEmitEffects.m3040c();
+                    Effect effect2 = (Effect) it7.next();
+                    if (effect2.alsoEmitEffects != null) {
+                        effect2.alsoEmitEffects.m3040c();
                     }
-                    if (c0369av2.alsoEmitEffectsOnDeath != null) {
-                        c0369av2.alsoEmitEffectsOnDeath.m3040c();
+                    if (effect2.alsoEmitEffectsOnDeath != null) {
+                        effect2.alsoEmitEffectsOnDeath.m3040c();
                     }
-                    if (c0369av2.ifSpawnFailsEmitEffects != null) {
-                        c0369av2.ifSpawnFailsEmitEffects.m3040c();
+                    if (effect2.ifSpawnFailsEmitEffects != null) {
+                        effect2.ifSpawnFailsEmitEffects.m3040c();
                     }
                 }
                 customUnitMetadata.f2788bE = unitConfig.getStaticBooleanValue("graphics", "splastEffect", (Boolean) false).booleanValue();
@@ -1610,21 +1610,21 @@ public class CustomUnitMetadataFactory {
                     c0423f.m3270a(customUnitMetadata, unitConfig, str10, VariableScope.nullOrMissingString);
                     customUnitMetadata.f3068dg.add(c0423f);
                 }
-                customUnitMetadata.f3069dh = customUnitMetadata.m3122a(EnumC0438n.f3133a, customUnitMetadata.f3069dh, true);
-                customUnitMetadata.f3070di = customUnitMetadata.m3122a(EnumC0438n.f3135c, customUnitMetadata.f3070di, true);
-                customUnitMetadata.f3071dj = customUnitMetadata.m3122a(EnumC0438n.f3134b, customUnitMetadata.f3071dj, true);
-                customUnitMetadata.f2902dl = customUnitMetadata.m3123a(EnumC0438n.f3137e);
-                customUnitMetadata.f2903dm = customUnitMetadata.m3123a(EnumC0438n.f3138f);
+                customUnitMetadata.f3069dh = customUnitMetadata.m3122a(EnumC0438n.move, customUnitMetadata.f3069dh, true);
+                customUnitMetadata.f3070di = customUnitMetadata.m3122a(EnumC0438n.idle, customUnitMetadata.f3070di, true);
+                customUnitMetadata.f3071dj = customUnitMetadata.m3122a(EnumC0438n.attack, customUnitMetadata.f3071dj, true);
+                customUnitMetadata.f2902dl = customUnitMetadata.m3123a(EnumC0438n.underConstruction);
+                customUnitMetadata.f2903dm = customUnitMetadata.m3123a(EnumC0438n.underConstructionWithLinkedBuiltTime);
                 if (customUnitMetadata.f2902dl != null && customUnitMetadata.f2903dm != null) {
                     throw new RuntimeException("Cannot use underConstruction and underConstructionWithLinkedBuiltTime animations at the same time");
                 }
-                customUnitMetadata.f2901dk = customUnitMetadata.m3123a(EnumC0438n.f3136d);
-                customUnitMetadata.f2904dn = customUnitMetadata.m3123a(EnumC0438n.f3139g);
+                customUnitMetadata.f2901dk = customUnitMetadata.m3123a(EnumC0438n.created);
+                customUnitMetadata.f2904dn = customUnitMetadata.m3123a(EnumC0438n.queuedUnits);
                 if (customUnitMetadata.f2904dn != null) {
                     customUnitMetadata.f2809bb = true;
                 }
-                customUnitMetadata.f2905do = customUnitMetadata.m3123a(EnumC0438n.f3140h);
-                customUnitMetadata.f2906dp = customUnitMetadata.m3123a(EnumC0438n.f3141i);
+                customUnitMetadata.f2905do = customUnitMetadata.m3123a(EnumC0438n.repair);
+                customUnitMetadata.f2906dp = customUnitMetadata.m3123a(EnumC0438n.reclaim);
                 customUnitMetadata.f3064cA.maxhp = unitConfig.m611g("core", "maxHp");
                 customUnitMetadata.f3064cA.maxshield = unitConfig.getStaticIntegerValue("core", "maxShield", (Integer) 0).intValue();
                 customUnitMetadata.f2832cB = unitConfig.getStaticBooleanValue("core", "startShieldAtZero", (Boolean) false).booleanValue();
@@ -1833,7 +1833,7 @@ public class CustomUnitMetadataFactory {
                 if (!customUnitMetadata.f2751aB) {
                     customUnitMetadata.f2932eW = customUnitMetadata.f2931eV;
                 } else {
-                    customUnitMetadata.f2932eW = MovementType.f1643a;
+                    customUnitMetadata.f2932eW = MovementType.NONE;
                 }
                 Boolean staticBooleanValue = unitConfig.getStaticBooleanValue("ai", "useAsBuilder", (Boolean) null);
                 customUnitMetadata.f2977fh = unitConfig.getStaticBooleanValue("ai", "useAsAttacker", (Boolean) true).booleanValue();
@@ -1868,11 +1868,11 @@ public class CustomUnitMetadataFactory {
                 customUnitMetadata.f2978fi = staticBooleanValue4.booleanValue();
                 if (customUnitMetadata.f2751aB) {
                     customUnitMetadata.f2779am = Building.IMAGE_ICON_TEAMS;
-                } else if (customUnitMetadata.f2931eV == MovementType.f1646d) {
+                } else if (customUnitMetadata.f2931eV == MovementType.AIR) {
                     customUnitMetadata.f2779am = AbstractC0297b.f1782n;
-                } else if (customUnitMetadata.f2931eV == MovementType.f1647e) {
+                } else if (customUnitMetadata.f2931eV == MovementType.WATER) {
                     customUnitMetadata.f2779am = WaterUnit.IMAGE_TEAMS;
-                } else if (customUnitMetadata.f2931eV == MovementType.f1648f) {
+                } else if (customUnitMetadata.f2931eV == MovementType.HOVER) {
                     if (customUnitMetadata.f2858cf) {
                         customUnitMetadata.f2779am = AbstractC0511j.f3466dF;
                     } else if (customUnitMetadata.mo3081l()) {
@@ -1939,7 +1939,7 @@ public class CustomUnitMetadataFactory {
                 }
                 float f3 = 0.0f;
                 float f4 = 0.0f;
-                if (customUnitMetadata.f2931eV == MovementType.f1646d) {
+                if (customUnitMetadata.f2931eV == MovementType.AIR) {
                     f3 = 35.0f;
                     f4 = 1.5f;
                 }
@@ -1962,15 +1962,15 @@ public class CustomUnitMetadataFactory {
                 customUnitMetadata.f2885dQ = unitConfig.getStaticFloatValue("attack", "turretTurnSpeed", Float.valueOf(8.0f)).floatValue();
                 customUnitMetadata.f2916dz = unitConfig.getStaticBooleanValue("attack", "turretRotateWithBody", (Boolean) true).booleanValue();
                 String staticStringValue16 = unitConfig.getStaticStringValue("attack", "attackMovement", "normal");
-                customUnitMetadata.f2886dR = EnumC0295b.f1769a;
+                customUnitMetadata.f2886dR = EnumC0295b.normal;
                 if (staticStringValue16.equalsIgnoreCase("normal")) {
-                    customUnitMetadata.f2886dR = EnumC0295b.f1769a;
+                    customUnitMetadata.f2886dR = EnumC0295b.normal;
                 }
                 if (staticStringValue16.equalsIgnoreCase("strafing")) {
-                    customUnitMetadata.f2886dR = EnumC0295b.f1770b;
+                    customUnitMetadata.f2886dR = EnumC0295b.strafing;
                 }
                 if (staticStringValue16.equalsIgnoreCase("bomber")) {
-                    customUnitMetadata.f2886dR = EnumC0295b.f1772d;
+                    customUnitMetadata.f2886dR = EnumC0295b.bomber;
                 }
                 customUnitMetadata.f2889dU = unitConfig.getStaticBooleanValue("attack", "disablePassiveTargeting", (Boolean) false).booleanValue();
                 customUnitMetadata.f2890dV = unitConfig.getStaticBooleanValue("attack", "stopTargetingAfterFiring", (Boolean) false).booleanValue();
@@ -2001,7 +2001,7 @@ public class CustomUnitMetadataFactory {
                 } else if (staticFloatValue2 != null) {
                     throw new RuntimeException("[attack]meleeEngangementDistance can only be used with isMelee:true");
                 }
-                m3581a(tookTime, EnumC0336af.f2148k);
+                m3581a(tookTime, EnumC0336af.unitParsePartA);
                 Iterator it10 = unitConfig.m618e("projectile_").iterator();
                 while (it10.hasNext()) {
                     String str15 = (String) it10.next();
@@ -2158,7 +2158,7 @@ public class CustomUnitMetadataFactory {
                         customUnitMetadata.f2911du = customUnitMetadata.f3087fF[0];
                     }
                 }
-                m3581a(tookTime, EnumC0336af.f2149l);
+                m3581a(tookTime, EnumC0336af.unitParsePartB);
                 long tookTime3 = C0651bl.getTookTime();
                 if (unitConfig.m602l("core", "action_")) {
                     for (int i6 = 0; i6 <= 50; i6++) {
@@ -2183,7 +2183,7 @@ public class CustomUnitMetadataFactory {
                     }
                     m3574a(customUnitMetadata, unitConfig, str18, VariableScope.nullOrMissingString, substring4, true, true);
                 }
-                m3581a(tookTime3, EnumC0336af.f2147j);
+                m3581a(tookTime3, EnumC0336af.actionParse);
                 ArrayList arrayList2 = new ArrayList();
                 ArrayList arrayList3 = new ArrayList();
                 int i7 = 0;
@@ -2336,7 +2336,7 @@ public class CustomUnitMetadataFactory {
                     }
                 }
                 if (customUnitMetadata.f3063cx == -2) {
-                    if (customUnitMetadata.f2931eV == MovementType.f1646d) {
+                    if (customUnitMetadata.f2931eV == MovementType.AIR) {
                         customUnitMetadata.f3063cx = 5;
                     } else if (customUnitMetadata.mo3085j()) {
                         if (customUnitMetadata.graphics_image_back != null) {
@@ -2360,11 +2360,11 @@ public class CustomUnitMetadataFactory {
                     Iterator it21 = customUnitMetadata.f3092fL.iterator();
                     while (it21.hasNext()) {
                         C0442r c0442r = (C0442r) it21.next();
-                        if (c0442r.f3155c == EnumC0443s.f3157a) {
+                        if (c0442r.f3155c == EnumC0443s.everyFrame) {
                             objectVector.add(c0442r);
-                        } else if (c0442r.f3155c == EnumC0443s.f3158b) {
+                        } else if (c0442r.f3155c == EnumC0443s.every4Frames) {
                             objectVector2.add(c0442r);
-                        } else if (c0442r.f3155c == EnumC0443s.f3159c) {
+                        } else if (c0442r.f3155c == EnumC0443s.every8Frames) {
                             objectVector3.add(c0442r);
                         } else {
                             throw new RuntimeException("Unknown check rate:" + c0442r.f3155c);
@@ -2380,7 +2380,7 @@ public class CustomUnitMetadataFactory {
                         ((C0444t) it22.next()).m3052a(customUnitMetadata);
                     }
                 }
-                m3581a(tookTime, EnumC0336af.f2150m);
+                m3581a(tookTime, EnumC0336af.unitParsePartC);
                 unitConfig.m635b();
                 Iterator it23 = unitConfig.f6242d.iterator();
                 while (it23.hasNext()) {
@@ -2410,7 +2410,7 @@ public class CustomUnitMetadataFactory {
                 synchronized (CustomUnitMetadata.f3009c) {
                     CustomUnitMetadata.f3009c.add(customUnitMetadata);
                 }
-                m3581a(tookTime, EnumC0336af.f2151n);
+                m3581a(tookTime, EnumC0336af.unitParsePartD);
                 return customUnitMetadata;
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -2549,7 +2549,7 @@ public class CustomUnitMetadataFactory {
             if (m3395a != null && m3395a.m3379c()) {
                 c0327d.f2010ab = m3395a;
             }
-            c0327d.f2071aG = EnumC0329f.f2081a;
+            c0327d.f2071aG = EnumC0329f.build;
             if (!"NONE".equalsIgnoreCase(trim)) {
                 customUnitMetadata.f3096fV.add(c0327d);
             }
@@ -2647,9 +2647,9 @@ public class CustomUnitMetadataFactory {
                 c0327d.f2065M = true;
             }
             if (!c0327d.f2062J) {
-                c0327d.f2058i = EnumC0220u.f1447a;
+                c0327d.f2058i = EnumC0220u.none;
             } else {
-                c0327d.f2058i = EnumC0220u.f1449c;
+                c0327d.f2058i = EnumC0220u.popupQueue;
             }
             c0327d.f2049r = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "requireConditional", (LogicBoolean) null);
             c0327d.f2050s = unitConfig.getLogicBooleanValue(customUnitMetadata, str, str2 + "isActive", (LogicBoolean) null);
@@ -2688,7 +2688,7 @@ public class CustomUnitMetadataFactory {
             c0327d.f2072aH = (EnumC0328e) unitConfig.getEnumValue(str, str2 + "aiUse", c0327d.f2072aH, EnumC0328e.class);
             c0327d.f1993G = customUnitMetadata.m3113a(unitConfig.getStaticStringValue(str, str2 + "guiBuildUnit", (String) null), str2 + "guiBuildUnit", str);
             if (c0327d.f1993G != null) {
-                c0327d.f2058i = EnumC0220u.f1448b;
+                c0327d.f2058i = EnumC0220u.placeBuilding;
                 if (staticStringValue != null) {
                     throw new RuntimeException("[" + str + "]guiBuildUnit and convertTo cannot currently be used the same action");
                 }
@@ -2752,7 +2752,7 @@ public class CustomUnitMetadataFactory {
             if (c0327d.f2068R || c0327d.f1996S != null || c0327d.f1997T != null || c0327d.f2043k != null || c0327d.f2002Y != null) {
                 customUnitMetadata.f2809bb = true;
             }
-            c0327d.f2071aG = EnumC0329f.f2082b;
+            c0327d.f2071aG = EnumC0329f.convert;
             if (staticStringValue != null && !"NONE".equalsIgnoreCase(staticStringValue)) {
                 c0327d.f1991E = customUnitMetadata.m3113a(staticStringValue, str2 + "convertTo", str);
                 c0327d.f2042j = staticStringValue;
@@ -2795,7 +2795,7 @@ public class CustomUnitMetadataFactory {
                 }
                 c0327d.f2012ad = Integer.valueOf(m3100c.f2429e);
                 if (c0327d.f2013ae == null) {
-                    c0327d.f2058i = EnumC0220u.f1453g;
+                    c0327d.f2058i = EnumC0220u.targetGround;
                     if (c0327d.f1993G != null) {
                         throw new RuntimeException("[" + str + "]guiBuildUnit and fireTurretXAtGround (without withOffset) cannot be used in the same action");
                     }
@@ -2858,7 +2858,7 @@ public class CustomUnitMetadataFactory {
                         for (String str4 : c0337ag.f2155b.keySet()) {
                             String str5 = (String) c0337ag.f2155b.get(str4);
                             if (str4.equalsIgnoreCase("withtag")) {
-                                if (c0333ac.f2100a != EnumC0334ad.f2117n && c0333ac.f2100a != EnumC0334ad.f2120q) {
+                                if (c0333ac.f2100a != EnumC0334ad.tookDamage && c0333ac.f2100a != EnumC0334ad.newMessage) {
                                     throw new C0395bl("[" + str + "]" + str2 + "autoTriggerOnEvent: " + c0333ac.f2100a.name() + " doesn't support parameter: " + str4);
                                 }
                                 String m1619p = CommonUtils.m1619p(str5);
@@ -2936,7 +2936,7 @@ public class CustomUnitMetadataFactory {
     public static BitmapOrTexture m3556a(String str, String str2, boolean z, CustomUnitMetadata customUnitMetadata) {
         long tookTime = C0651bl.getTookTime();
         BitmapOrTexture m3545b = m3545b(str, str2, z, customUnitMetadata);
-        m3581a(tookTime, EnumC0336af.f2139b);
+        m3581a(tookTime, EnumC0336af.imageLoadOrGet);
         return m3545b;
     }
 
@@ -2990,7 +2990,7 @@ public class CustomUnitMetadataFactory {
             long tookTime = C0651bl.getTookTime();
             try {
                 bitmapOrTexture = gameEngine.graphics.mo179a((InputStream) m3541c, true);
-                m3581a(tookTime, EnumC0336af.f2138a);
+                m3581a(tookTime, EnumC0336af.imageLoad);
                 if (bitmapOrTexture.mo370z()) {
                     GameEngine.PrintLOG("oomErrors:" + f2130k);
                     f2130k++;
@@ -3048,7 +3048,7 @@ public class CustomUnitMetadataFactory {
     public static AbstractC0602i m3559a(String str, String str2, CustomUnitMetadata customUnitMetadata) {
         long tookTime = C0651bl.getTookTime();
         AbstractC0602i m3546b = m3546b(str, str2, customUnitMetadata);
-        m3581a(tookTime, EnumC0336af.f2141d);
+        m3581a(tookTime, EnumC0336af.soundLoadOrGet);
         return m3546b;
     }
 
@@ -3094,7 +3094,7 @@ public class CustomUnitMetadataFactory {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            m3581a(tookTime, EnumC0336af.f2140c);
+            m3581a(tookTime, EnumC0336af.soundLoad);
             if (m2414a == null) {
                 String str5 = "Sound file found but failed to load: " + str4;
                 if (str2.toLowerCase(Locale.ROOT).endsWith(".ogg")) {

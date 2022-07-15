@@ -82,11 +82,11 @@ public class Helicopter extends AbstractC0297b {
 
     /* renamed from: b */
     public UnitType getUnitType() {
-        return UnitType.f1715l;
+        return UnitType.helicopter;
     }
 
     /* renamed from: c */
-    public static void m3647c() {
+    public static void load() {
         GameEngine gameEngine = GameEngine.getInstance();
         IMAGE = gameEngine.graphics.loadImage(R.drawable.helicopter);
         IMAGE_BLADES = gameEngine.graphics.loadImage(R.drawable.helicopter_blades);

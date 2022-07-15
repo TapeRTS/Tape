@@ -60,8 +60,8 @@ public class BuilderShip extends WaterUnit implements AbstractC0451d {
     }
 
     /* renamed from: q_ */
-    public UnitType getUnitType() {
-        return UnitType.f1686L;
+    public UnitType mo1775r() {
+        return UnitType.builderShip;
     }
 
     @Override // com.corrodinggames.rts.game.units.AbstractC0451d
@@ -83,7 +83,7 @@ public class BuilderShip extends WaterUnit implements AbstractC0451d {
     }
 
     /* renamed from: K */
-    public static void m2727K() {
+    public static void load() {
         GameEngine gameEngine = GameEngine.getInstance();
         IMAGE = gameEngine.graphics.loadImage(R.drawable.builder_ship);
         IMAGE_WREAK = gameEngine.graphics.loadImage(R.drawable.builder_ship_dead);
@@ -309,21 +309,21 @@ public class BuilderShip extends WaterUnit implements AbstractC0451d {
     /* renamed from: a */
     public static void m2726a(ArrayList arrayList, int i) {
         arrayList.add(f3623i);
-        arrayList.add(new C0221v(UnitType.f1701a, 1, 1));
-        arrayList.add(new C0221v(UnitType.f1709f, 1, 2));
-        arrayList.add(new C0221v(UnitType.f1710g, 1, 3));
-        arrayList.add(new C0221v(UnitType.f1705b, 1, 4));
-        arrayList.add(new C0221v(UnitType.f1706c, 1, 5));
-        arrayList.add(new C0221v(UnitType.f1707d, 1, 6));
-        arrayList.add(new C0221v(UnitType.f1684J, 1, 7));
-        arrayList.add(new C0221v(UnitType.f1728y, 1, 8));
-        arrayList.add(new C0221v(UnitType.f1676B, 1, 9));
+        arrayList.add(new C0221v(UnitType.extractor, 1, 1));
+        arrayList.add(new C0221v(UnitType.turret, 1, 2));
+        arrayList.add(new C0221v(UnitType.antiAirTurret, 1, 3));
+        arrayList.add(new C0221v(UnitType.landFactory, 1, 4));
+        arrayList.add(new C0221v(UnitType.airFactory, 1, 5));
+        arrayList.add(new C0221v(UnitType.seaFactory, 1, 6));
+        arrayList.add(new C0221v(UnitType.fabricator, 1, 7));
+        arrayList.add(new C0221v(UnitType.laserDefence, 1, 8));
+        arrayList.add(new C0221v(UnitType.repairbay, 1, 9));
     }
 
     @Override // com.corrodinggames.rts.game.units.Unit
     /* renamed from: M */
     public ArrayList mo2712M() {
-        return getUnitType().mo3132a(mo2647U());
+        return mo1775r().mo3132a(mo2647U());
     }
 
     @Override // com.corrodinggames.rts.game.units.OrderableUnit
