@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.corrodinggames.rts.java.Main
+Class-Path: .
+

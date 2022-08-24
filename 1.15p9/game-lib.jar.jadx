@@ -1,0 +1,62 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "game-lib.jar"
+  ],
+  "treeExpansions": [
+    [
+      "p000a.p001a",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "org.p054a.p055a",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ],
+    [
+      "units",
+      "game",
+      "rts",
+      "corrodinggames",
+      "com",
+      "源代码",
+      "game-lib.jar"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [],
+  "activeTab": -1,
+  "cacheDir": "game-lib.jar.cache",
+  "enableLiveReload": false,
+  "searchHistory": []
+}
