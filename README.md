@@ -15,9 +15,9 @@ Tape是一组开放的、不受阻碍的 Rusted Warfare混淆映射，每个人�
 
 ## 鸣谢
 
-- [JADX](https://github.com/skylot/jadx)
-- [Recaf](https://github.com/Col-E/Recaf)
-- [Bytecode Viewer](https://github.com/Konloch/bytecode-viewer)
+- [JADX](https://github.com/skylot/jadx)  
+- [Recaf](https://github.com/Col-E/Recaf)  
+- [Bytecode Viewer](https://github.com/Konloch/bytecode-viewer)  
 
 # EN
 
@@ -32,3 +32,7 @@ No
 Please check [naming convention] (CONVENTIONS.md)  
 
 ## Thanks  
+
+- [JADX](https://github.com/skylot/jadx)  
+- [Recaf](https://github.com/Col-E/Recaf)  
+- [Bytecode Viewer](https://github.com/Konloch/bytecode-viewer)  
