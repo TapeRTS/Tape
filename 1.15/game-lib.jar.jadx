@@ -50,6 +50,12 @@
       "com",
       "源代码",
       "game-lib.jar"
+    ],
+    [
+      "codedisaster.steamworks",
+      "com",
+      "源代码",
+      "game-lib.jar"
     ]
   ],
   "codeData": {
@@ -657,6 +663,20 @@
           "declClass": "com.corrodinggames.rts.gameFramework.o.a"
         },
         "newName": "SteamEngine"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab"
+        },
+        "newName": "UnitConfig"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ai"
+        },
+        "newName": "Point3DF"
       },
       {
         "nodeRef": {
@@ -1593,6 +1613,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "aU:Z"
+        },
+        "newName": "isModsInSD"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "al:Lcom/corrodinggames/rts/gameFramework/l;"
         },
         "newName": "gameEngine"
@@ -1652,6 +1680,62 @@
           "shortId": "a:Lcom/corrodinggames/rts/gameFramework/o/a;"
         },
         "newName": "steamEngine"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a:Ljava/lang/String;"
+        },
+        "newName": "path"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b:Z"
+        },
+        "newName": "isTrackingReads"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c:Ljava/util/LinkedHashSet;"
+        },
+        "newName": "keyValuePairTexts"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "j:Ljava/util/LinkedHashMap;"
+        },
+        "newName": "sectionMap"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ai",
+          "shortId": "a:F"
+        },
+        "newName": "x"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ai",
+          "shortId": "b:F"
+        },
+        "newName": "y"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ai",
+          "shortId": "c:F"
+        },
+        "newName": "z"
       },
       {
         "nodeRef": {
@@ -1956,6 +2040,114 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "a(Lcom/corrodinggames/rts/game/units/custom/l;Lcom/corrodinggames/rts/gameFramework/utility/ab;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 720896
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "a(Lcom/corrodinggames/rts/game/units/custom/l;Lcom/corrodinggames/rts/gameFramework/utility/ab;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 786432
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "a(Ljava/lang/String;Ljava/io/InputStream;JLcom/corrodinggames/rts/gameFramework/i/b;Lcom/corrodinggames/rts/gameFramework/utility/j;Ljava/lang/String;Ljava/lang/String;)Lcom/corrodinggames/rts/game/units/custom/l;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 927
+        },
+        "newName": "warnMessage"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "a(Ljava/lang/String;Ljava/io/InputStream;JLcom/corrodinggames/rts/gameFramework/i/b;Lcom/corrodinggames/rts/gameFramework/utility/j;Ljava/lang/String;Ljava/lang/String;)Lcom/corrodinggames/rts/game/units/custom/l;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "unitConfigName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/Exception;Lcom/corrodinggames/rts/gameFramework/i/b;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "unitConfigName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Lcom/corrodinggames/rts/game/units/custom/l;)Lcom/corrodinggames/rts/gameFramework/a/i;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 16
+        },
+        "newName": "dir"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Lcom/corrodinggames/rts/game/units/custom/l;)Lcom/corrodinggames/rts/gameFramework/a/i;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "rawPath"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "h()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 3
+        },
+        "newName": "mods"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.game.units.custom.ag",
+          "shortId": "h()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 61
+        },
+        "newName": "modsIter"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.ba",
           "shortId": "e()V"
         },
@@ -2020,6 +2212,22 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.f",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "decodeTextAsMultiline"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.f",
+          "shortId": "h(Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "getDirctory"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.f.e",
           "shortId": "a()Ljava/util/ArrayList;"
         },
@@ -2028,6 +2236,14 @@
           "index": 1
         },
         "newName": "displayedEndStats"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.i.b",
+          "shortId": "a()Ljava/lang/String;"
+        },
+        "newName": "modName"
       },
       {
         "nodeRef": {
@@ -2797,6 +3013,14 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "a(Ljava/lang/String;I)V"
+        },
+        "newName": "log"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "b(Ljava/lang/String;)V"
         },
         "newName": "print"
@@ -2807,7 +3031,15 @@
           "declClass": "com.corrodinggames.rts.gameFramework.l",
           "shortId": "e(Ljava/lang/String;)V"
         },
-        "newName": "print"
+        "newName": "log"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.l",
+          "shortId": "g(Ljava/lang/String;)V"
+        },
+        "newName": "warn"
       },
       {
         "nodeRef": {
@@ -2816,6 +3048,1386 @@
           "shortId": "a()Lcom/corrodinggames/rts/gameFramework/o/a;"
         },
         "newName": "getSteamEngine"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "\u003cinit\u003e(Ljava/io/InputStream;Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "unitConfigPath"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "\u003cinit\u003e(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "unitConfigPath"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/io/BufferedReader;)V"
+        },
+        "newName": "readConfig"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/io/InputStream;)V"
+        },
+        "newName": "readConfigFromStream"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;)V"
+        },
+        "newName": "readConfigFromPath"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/Enum;Ljava/lang/Class;)Ljava/lang/Enum;"
+        },
+        "newName": "convertStringToEnumOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/Enum;Ljava/lang/Class;)Ljava/lang/Enum;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 12
+        },
+        "newName": "enumMember"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/Enum;Ljava/lang/Class;)Ljava/lang/Enum;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 14
+        },
+        "newName": "member"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/Enum;Ljava/lang/Class;)Ljava/lang/Enum;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/Enum;Ljava/lang/Class;)Ljava/lang/Enum;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "enumClass"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        "newName": "addKeyValuePairToTextsDefaultsUnknown"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;D)D"
+        },
+        "newName": "getValueAsDoubleOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;D)D"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;D)D"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;D)D"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;J)J"
+        },
+        "newName": "getValueAsLongOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;J)J"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;J)J"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;J)J"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/PointF;)Landroid/graphics/PointF;"
+        },
+        "newName": "getValueAsPointFOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/PointF;)Landroid/graphics/PointF;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/PointF;)Landroid/graphics/PointF;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/PointF;)Landroid/graphics/PointF;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;)Landroid/graphics/Rect;"
+        },
+        "newName": "getValueAsRectOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;)Landroid/graphics/Rect;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;)Landroid/graphics/Rect;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 655360
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;)Landroid/graphics/Rect;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 720896
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Lcom/corrodinggames/rts/gameFramework/utility/ai;)Lcom/corrodinggames/rts/gameFramework/utility/ai;"
+        },
+        "newName": "getValueAsPoint3DFOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Lcom/corrodinggames/rts/gameFramework/utility/ai;)Lcom/corrodinggames/rts/gameFramework/utility/ai;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Lcom/corrodinggames/rts/gameFramework/utility/ai;)Lcom/corrodinggames/rts/gameFramework/utility/ai;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Lcom/corrodinggames/rts/gameFramework/utility/ai;)Lcom/corrodinggames/rts/gameFramework/utility/ai;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "newName": "getValueAsBoolean"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;Ljava/lang/Class;)Ljava/lang/Enum;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;Ljava/lang/Class;)Ljava/lang/Enum;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;)Ljava/lang/Float;"
+        },
+        "newName": "getValueAsFloatOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;)Ljava/lang/Float;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;)Ljava/lang/Float;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;)Ljava/lang/Float;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;Z)Ljava/lang/Float;"
+        },
+        "newName": "getValueAsTimeOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;Z)Ljava/lang/Float;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;Z)Ljava/lang/Float;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;Z)Ljava/lang/Float;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Short;)Ljava/lang/Short;"
+        },
+        "newName": "getValueAsShortOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Short;)Ljava/lang/Short;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Short;)Ljava/lang/Short;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Short;)Ljava/lang/Short;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        "newName": "addKeyValuePairToTexts"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "newName": "getAltValueAsBoolean"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key1"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "key2"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 655360
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "getAltValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "value1"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 3
+        },
+        "newName": "value2"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key1"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key2"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lcom/corrodinggames/rts/game/units/custom/bb;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 5
+        },
+        "newName": "text"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+        },
+        "newName": "getValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 3
+        },
+        "newName": "keyValuePairMap"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 7
+        },
+        "newName": "value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "throwsException"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "getValueAndRecord"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)F"
+        },
+        "newName": "parseTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)F"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 8
+        },
+        "newName": "time"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)F"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "timeStr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)F"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "toSpeed"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)F"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)F"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)F"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589825
+        },
+        "newName": "timeUnit"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)F"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 655360
+        },
+        "newName": "isTimeUnitSecond"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 10
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 17
+        },
+        "newName": "keyValuePairMap"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 32
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "errorMessage"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "decodeTextAsMultiline"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "getValueDirectly"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 3
+        },
+        "newName": "section"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;"
+        },
+        "newName": "getValueAsIntegerOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "getValueAsStaticString"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c()I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 17
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c()I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 21
+        },
+        "newName": "keyValuePairMap"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c()I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 29
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c(Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c(Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c(Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        "newName": "throwNoKeyInSectionException"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "getValueOrDefault"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "defaultValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "d(Ljava/lang/String;Ljava/lang/String;)Z"
+        },
+        "newName": "getValueAsPrimeBoolean"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "d(Ljava/lang/String;Ljava/lang/String;)Z"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "d(Ljava/lang/String;Ljava/lang/String;)Z"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "d(Ljava/lang/String;Ljava/lang/String;)Z"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "newName": "getValueEnsureExistsKey"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Float;"
+        },
+        "newName": "getValueAsFloat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "j(Ljava/lang/String;Ljava/lang/String;)D"
+        },
+        "newName": "getValueAsDouble"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "j(Ljava/lang/String;Ljava/lang/String;)D"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "sectionName"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.corrodinggames.rts.gameFramework.utility.ab",
+          "shortId": "j(Ljava/lang/String;Ljava/lang/String;)D"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "key"
       },
       {
         "nodeRef": {
@@ -3000,10 +4612,10 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.j.ad",
       "subPath": "java",
-      "caret": 124890,
+      "caret": 124866,
       "view": {
         "x": 0,
-        "y": 49649
+        "y": 50175
       }
     },
     {
@@ -3013,7 +4625,7 @@
       "caret": 1894,
       "view": {
         "x": 0,
-        "y": 770
+        "y": 658
       }
     },
     {
@@ -3040,7 +4652,7 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.game.n",
       "subPath": "java",
-      "caret": 1328,
+      "caret": 1333,
       "view": {
         "x": 0,
         "y": 17
@@ -3070,10 +4682,10 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.j.n",
       "subPath": "java",
-      "caret": 13914,
+      "caret": 13907,
       "view": {
         "x": 0,
-        "y": 4806
+        "y": 4917
       }
     },
     {
@@ -3083,7 +4695,7 @@
       "caret": 487,
       "view": {
         "x": 0,
-        "y": 184
+        "y": 178
       }
     },
     {
@@ -3103,7 +4715,7 @@
       "caret": 392,
       "view": {
         "x": 0,
-        "y": 760
+        "y": 130
       }
     },
     {
@@ -3153,7 +4765,7 @@
       "caret": 570,
       "view": {
         "x": 0,
-        "y": 384
+        "y": 242
       }
     },
     {
@@ -3310,10 +4922,10 @@
       "type": "class",
       "tabPath": "com.corrodinggames.rts.gameFramework.i.b",
       "subPath": "java",
-      "caret": 841,
+      "caret": 844,
       "view": {
         "x": 0,
-        "y": 336
+        "y": 290
       }
     },
     {
@@ -3323,7 +4935,7 @@
       "caret": 1016,
       "view": {
         "x": 0,
-        "y": 8852
+        "y": 322
       }
     },
     {
@@ -3333,7 +4945,7 @@
       "caret": 592,
       "view": {
         "x": 0,
-        "y": 2056
+        "y": 258
       }
     },
     {
@@ -3353,14 +4965,56 @@
       "caret": 214,
       "view": {
         "x": 0,
+        "y": 240
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.units.custom.ag",
+      "subPath": "java",
+      "caret": 168033,
+      "view": {
+        "x": 0,
+        "y": 46642
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.gameFramework.utility.ab",
+      "subPath": "java",
+      "caret": 34159,
+      "view": {
+        "x": 6,
+        "y": 12951
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.game.units.custom.bo",
+      "subPath": "java",
+      "caret": 454,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.corrodinggames.rts.gameFramework.utility.ai",
+      "subPath": "java",
+      "caret": 270,
+      "view": {
+        "x": 0,
         "y": 0
       }
     }
   ],
-  "activeTab": 35,
+  "activeTab": 37,
   "cacheDir": "game-lib.jar.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "Error Loading Unit",
+    "\"skipping line",
     "\"action\", \"update\"",
     "unitsKilled",
     "self_team",
@@ -3388,8 +5042,6 @@
     "chat",
     "start",
     "no free",
-    "self_",
-    "-team",
-    "setDocument"
+    "self_"
   ]
 }
